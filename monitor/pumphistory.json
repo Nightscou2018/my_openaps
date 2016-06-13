@@ -1,0 +1,38 @@
+[
+  {
+    "programmed": 5.0, 
+    "_type": "Bolus", 
+    "type": "normal", 
+    "_description": "Bolus 2016-06-13T22:33:31 head[4], body[0] op[0x01]", 
+    "duration": 0, 
+    "timestamp": "2016-06-13T22:33:31", 
+    "_body": "", 
+    "_head": "01323200", 
+    "amount": 5.0, 
+    "_date": "5fa1560d10"
+  }, 
+  {
+    "programmed": 4.0, 
+    "_type": "Bolus", 
+    "type": "normal", 
+    "_description": "Bolus 2016-06-13T20:57:23 head[4], body[0] op[0x01]", 
+    "duration": 0, 
+    "timestamp": "2016-06-13T20:57:23", 
+    "_body": "", 
+    "_head": "01282800", 
+    "amount": 4.0, 
+    "_date": "57b9540d10"
+  }, 
+  {
+    "programmed": 4.0, 
+    "_type": "Bolus", 
+    "type": "normal", 
+    "_description": "Bolus 2016-06-13T18:34:31 head[4], body[0] op[0x01]", 
+    "duration": 0, 
+    "timestamp": "2016-06-13T18:34:31", 
+    "_body": "", 
+    "_head": "01282800", 
+    "amount": 4.0, 
+    "_date": "5fa2520d10"
+  }
+]
