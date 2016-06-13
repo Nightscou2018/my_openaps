@@ -1,5 +1,26 @@
 [
   {
+    "_type": "CalBGForPH", 
+    "_description": "CalBGForPH 2016-06-13T22:59:59 head[2], body[0] op[0x0a]", 
+    "timestamp": "2016-06-13T22:59:59", 
+    "_body": "", 
+    "_head": "0a9a", 
+    "amount": 154, 
+    "_date": "7bbb360d10"
+  }, 
+  {
+    "programmed": 3.0, 
+    "_type": "Bolus", 
+    "type": "normal", 
+    "_description": "Bolus 2016-06-13T22:56:00 head[4], body[0] op[0x01]", 
+    "duration": 0, 
+    "timestamp": "2016-06-13T22:56:00", 
+    "_body": "", 
+    "_head": "011e1e00", 
+    "amount": 3.0, 
+    "_date": "40b8560d10"
+  }, 
+  {
     "programmed": 5.0, 
     "_type": "Bolus", 
     "type": "normal", 
@@ -22,17 +43,5 @@
     "_head": "01282800", 
     "amount": 4.0, 
     "_date": "57b9540d10"
-  }, 
-  {
-    "programmed": 4.0, 
-    "_type": "Bolus", 
-    "type": "normal", 
-    "_description": "Bolus 2016-06-13T18:34:31 head[4], body[0] op[0x01]", 
-    "duration": 0, 
-    "timestamp": "2016-06-13T18:34:31", 
-    "_body": "", 
-    "_head": "01282800", 
-    "amount": 4.0, 
-    "_date": "5fa2520d10"
   }
 ]
