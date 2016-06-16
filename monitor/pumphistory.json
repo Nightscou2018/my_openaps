@@ -1,73 +1,146 @@
 [
   {
-    "_type": "Model522ResultTotals", 
-    "_description": "Model522ResultTotals 2016-06-14T00:00:00 head[1], body[41] op[0x6d]", 
-    "timestamp": "2016-06-14T00:00:00", 
-    "_body": "0500914ac30400000994049430050034000005003400000000000005006407000000070c00e8000000", 
-    "_head": "6d", 
-    "_date": "6d10"
-  }, 
-  {
-    "_type": "ResultDailyTotal", 
-    "_description": "ResultDailyTotal 2016-06-14T00:00:00 head[5], body[0] op[0x07]", 
-    "timestamp": "2016-06-14T00:00:00", 
-    "_body": "", 
-    "valid_date": "2016-06-13", 
-    "_head": "0700000994", 
-    "_date": "6d10"
-  }, 
-  {
-    "_type": "CalBGForPH", 
-    "_description": "CalBGForPH 2016-06-13T23:02:44 head[2], body[0] op[0x0a]", 
-    "timestamp": "2016-06-13T23:02:44", 
-    "_body": "", 
-    "_head": "0a9b", 
-    "amount": 155, 
-    "_date": "6c82370d10"
-  }, 
-  {
-    "_type": "CalBGForPH", 
-    "_description": "CalBGForPH 2016-06-13T22:59:59 head[2], body[0] op[0x0a]", 
-    "timestamp": "2016-06-13T22:59:59", 
-    "_body": "", 
-    "_head": "0a9a", 
-    "amount": 154, 
-    "_date": "7bbb360d10"
-  }, 
-  {
-    "programmed": 3.0, 
+    "programmed": 5.0, 
     "_type": "Bolus", 
     "type": "normal", 
-    "_description": "Bolus 2016-06-13T22:56:00 head[4], body[0] op[0x01]", 
+    "_description": "Bolus 2016-06-15T22:33:45 head[4], body[0] op[0x01]", 
     "duration": 0, 
-    "timestamp": "2016-06-13T22:56:00", 
+    "timestamp": "2016-06-15T22:33:45", 
     "_body": "", 
-    "_head": "011e1e00", 
-    "amount": 3.0, 
-    "_date": "40b8560d10"
+    "_head": "01323200", 
+    "amount": 5.0, 
+    "_date": "6da1560f10"
+  }, 
+  {
+    "_type": "CalBGForPH", 
+    "_description": "CalBGForPH 2016-06-15T22:22:27 head[2], body[0] op[0x0a]", 
+    "timestamp": "2016-06-15T22:22:27", 
+    "_body": "", 
+    "_head": "0a4b", 
+    "amount": 75, 
+    "_date": "5b96360f10"
   }, 
   {
     "programmed": 5.0, 
     "_type": "Bolus", 
     "type": "normal", 
-    "_description": "Bolus 2016-06-13T22:33:31 head[4], body[0] op[0x01]", 
+    "_description": "Bolus 2016-06-15T22:04:58 head[4], body[0] op[0x01]", 
     "duration": 0, 
-    "timestamp": "2016-06-13T22:33:31", 
+    "timestamp": "2016-06-15T22:04:58", 
     "_body": "", 
     "_head": "01323200", 
     "amount": 5.0, 
-    "_date": "5fa1560d10"
+    "_date": "7a84560f10"
+  }, 
+  {
+    "programmed": 3.0, 
+    "_type": "Bolus", 
+    "type": "normal", 
+    "_description": "Bolus 2016-06-15T21:18:42 head[4], body[0] op[0x01]", 
+    "duration": 0, 
+    "timestamp": "2016-06-15T21:18:42", 
+    "_body": "", 
+    "_head": "011e1e00", 
+    "amount": 3.0, 
+    "_date": "6a92550f10"
+  }, 
+  {
+    "programmed": 3.0, 
+    "_type": "Bolus", 
+    "type": "normal", 
+    "_description": "Bolus 2016-06-15T21:03:46 head[4], body[0] op[0x01]", 
+    "duration": 0, 
+    "timestamp": "2016-06-15T21:03:46", 
+    "_body": "", 
+    "_head": "011e1e00", 
+    "amount": 3.0, 
+    "_date": "6e83550f10"
+  }, 
+  {
+    "_type": "PumpResume", 
+    "_description": "PumpResume 2016-06-15T19:43:28 head[2], body[0] op[0x1f]", 
+    "timestamp": "2016-06-15T19:43:28", 
+    "_body": "", 
+    "_head": "1f00", 
+    "_date": "5cab130f10"
   }, 
   {
     "programmed": 4.0, 
     "_type": "Bolus", 
     "type": "normal", 
-    "_description": "Bolus 2016-06-13T20:57:23 head[4], body[0] op[0x01]", 
+    "_description": "Bolus 2016-06-15T19:43:16 head[4], body[0] op[0x01]", 
     "duration": 0, 
-    "timestamp": "2016-06-13T20:57:23", 
+    "timestamp": "2016-06-15T19:43:16", 
+    "_body": "", 
+    "_head": "01280400", 
+    "amount": 0.4, 
+    "_date": "50ab530f10"
+  }, 
+  {
+    "_type": "PumpSuspend", 
+    "_description": "PumpSuspend 2016-06-15T19:43:28 head[2], body[0] op[0x1e]", 
+    "timestamp": "2016-06-15T19:43:28", 
+    "_body": "", 
+    "_head": "1e00", 
+    "_date": "5cab130f10"
+  }, 
+  {
+    "_type": "Prime", 
+    "type": "manual", 
+    "_description": "Prime 2016-06-15T19:42:18 head[5], body[0] op[0x03]", 
+    "timestamp": "2016-06-15T19:42:18", 
+    "_body": "", 
+    "fixed": 0.0, 
+    "_head": "0300000014", 
+    "amount": 2.0, 
+    "_date": "52aa330f10"
+  }, 
+  {
+    "_type": "Rewind", 
+    "_description": "Rewind 2016-06-15T19:40:10 head[2], body[0] op[0x21]", 
+    "timestamp": "2016-06-15T19:40:10", 
+    "_body": "", 
+    "_head": "2100", 
+    "_date": "4aa8130f10"
+  }, 
+  {
+    "_type": "ClearAlarm", 
+    "_description": "ClearAlarm 2016-06-15T19:40:08 head[2], body[0] op[0x0c]", 
+    "timestamp": "2016-06-15T19:40:08", 
+    "_body": "", 
+    "_head": "0c3e", 
+    "_date": "48a8130f10"
+  }, 
+  {
+    "_type": "AlarmPump", 
+    "_description": "AlarmPump 2016-06-15T19:38:55 head[4], body[0] op[0x06]", 
+    "timestamp": "2016-06-15T19:38:55", 
+    "_body": "", 
+    "_head": "063e0331", 
+    "_date": "77a6534f10"
+  }, 
+  {
+    "programmed": 4.0, 
+    "_type": "Bolus", 
+    "type": "normal", 
+    "_description": "Bolus 2016-06-15T19:38:53 head[4], body[0] op[0x01]", 
+    "duration": 0, 
+    "timestamp": "2016-06-15T19:38:53", 
+    "_body": "", 
+    "_head": "01280100", 
+    "amount": 0.1, 
+    "_date": "75a6530f10"
+  }, 
+  {
+    "programmed": 4.0, 
+    "_type": "Bolus", 
+    "type": "normal", 
+    "_description": "Bolus 2016-06-15T18:55:05 head[4], body[0] op[0x01]", 
+    "duration": 0, 
+    "timestamp": "2016-06-15T18:55:05", 
     "_body": "", 
     "_head": "01282800", 
     "amount": 4.0, 
-    "_date": "57b9540d10"
+    "_date": "45b7520f10"
   }
 ]
