@@ -1,1 +1,1 @@
-[{"msg":"BG data is too old, or clock set incorrectly Fri Jun 17 2016 00:32:57 GMT-0700 (PDT) vs Fri Jun 17 2016 00:43:54 GMT-0700 (PDT)"}]
+{"temp":"absolute","bg":255,"tick":-4,"eventualBG":68,"snoozeBG":192,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 90 Deviation: 31 BGI: -14.38","reason":"Eventual BG 68<90, bolus snooze: eventual BG range 68-192; setting current basal of 1.1 as temp. Setting neutral temp basal of 1.1U/hr","duration":30,"rate":1.1}
