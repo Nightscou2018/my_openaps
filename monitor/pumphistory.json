@@ -1,5 +1,24 @@
 [
   {
+    "_type": "TempBasalDuration", 
+    "duration (min)": 30, 
+    "_description": "TempBasalDuration 2016-06-21T15:51:28 head[2], body[0] op[0x16]", 
+    "timestamp": "2016-06-21T15:51:28", 
+    "_body": "", 
+    "_head": "1601", 
+    "_date": "5cb30f5510"
+  }, 
+  {
+    "_type": "TempBasal", 
+    "temp": "absolute", 
+    "_description": "TempBasal 2016-06-21T15:51:28 head[2], body[1] op[0x33]", 
+    "timestamp": "2016-06-21T15:51:28", 
+    "_body": "00", 
+    "_head": "332f", 
+    "rate": 1.175, 
+    "_date": "5cb30f5510"
+  }, 
+  {
     "_type": "OldBolusWizardChange", 
     "stale": {
       "insulin_sensitivies": [
@@ -679,43 +698,5 @@
     "food_estimate": 4.1, 
     "bg_target_low": 75, 
     "sensitivity": 30
-  }, 
-  {
-    "_type": "TempBasalDuration", 
-    "duration (min)": 30, 
-    "_description": "TempBasalDuration 2016-06-21T11:41:31 head[2], body[0] op[0x16]", 
-    "timestamp": "2016-06-21T11:41:31", 
-    "_body": "", 
-    "_head": "1601", 
-    "_date": "5fa90b5510"
-  }, 
-  {
-    "_type": "TempBasal", 
-    "temp": "absolute", 
-    "_description": "TempBasal 2016-06-21T11:41:31 head[2], body[1] op[0x33]", 
-    "timestamp": "2016-06-21T11:41:31", 
-    "_body": "00", 
-    "_head": "3320", 
-    "rate": 0.8, 
-    "_date": "5fa90b5510"
-  }, 
-  {
-    "_type": "TempBasalDuration", 
-    "duration (min)": 30, 
-    "_description": "TempBasalDuration 2016-06-21T11:36:27 head[2], body[0] op[0x16]", 
-    "timestamp": "2016-06-21T11:36:27", 
-    "_body": "", 
-    "_head": "1601", 
-    "_date": "5ba40b5510"
-  }, 
-  {
-    "_type": "TempBasal", 
-    "temp": "absolute", 
-    "_description": "TempBasal 2016-06-21T11:36:27 head[2], body[1] op[0x33]", 
-    "timestamp": "2016-06-21T11:36:27", 
-    "_body": "00", 
-    "_head": "3368", 
-    "rate": 2.6, 
-    "_date": "5ba40b5510"
   }
 ]
