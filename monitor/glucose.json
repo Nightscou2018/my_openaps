@@ -1,5 +1,15 @@
-Agent pid 19091
 [
+  {
+    "_id": "5768d46a2ac0a07cf65e6e98",
+    "sgv": 146,
+    "date": 1466487765000,
+    "dateString": "2016-06-21T05:42:45.000Z",
+    "trend": 3,
+    "direction": "FortyFiveUp",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 146
+  },
   {
     "_id": "5768d33e2ac0a07cf65e6c78",
     "sgv": 141,
@@ -98,16 +108,5 @@ Agent pid 19091
     "device": "share2",
     "type": "sgv",
     "glucose": 114
-  },
-  {
-    "_id": "5768c7862ac0a07cf65e5742",
-    "sgv": 106,
-    "date": 1466484466000,
-    "dateString": "2016-06-21T04:47:46.000Z",
-    "trend": 4,
-    "direction": "Flat",
-    "device": "share2",
-    "type": "sgv",
-    "glucose": 106
   }
 ]
