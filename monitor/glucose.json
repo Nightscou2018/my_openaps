@@ -1,5 +1,16 @@
-Agent pid 16502
+Agent pid 16737
 [
+  {
+    "_id": "5768c65a2ac0a07cf65e5523",
+    "sgv": 104,
+    "date": 1466484167000,
+    "dateString": "2016-06-21T04:42:47.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 104
+  },
   {
     "_id": "5768c52e2ac0a07cf65e5304",
     "sgv": 104,
@@ -98,16 +109,5 @@ Agent pid 16502
     "device": "share2",
     "type": "sgv",
     "glucose": 138
-  },
-  {
-    "_id": "5768b9762ac0a07cf65e3dd0",
-    "sgv": 128,
-    "date": 1466480865000,
-    "dateString": "2016-06-21T03:47:45.000Z",
-    "trend": 4,
-    "direction": "Flat",
-    "device": "share2",
-    "type": "sgv",
-    "glucose": 128
   }
 ]
