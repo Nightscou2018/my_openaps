@@ -1,5 +1,16 @@
-Agent pid 17181
+Agent pid 17399
 [
+  {
+    "_id": "5768c9de2ac0a07cf65e5b80",
+    "sgv": 114,
+    "date": 1466485063000,
+    "dateString": "2016-06-21T04:57:43.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 114
+  },
   {
     "_id": "5768c7862ac0a07cf65e5742",
     "sgv": 106,
@@ -98,16 +109,5 @@ Agent pid 17181
     "device": "share2",
     "type": "sgv",
     "glucose": 121
-  },
-  {
-    "_id": "5768bcfa2ac0a07cf65e442a",
-    "sgv": 127,
-    "date": 1466481763000,
-    "dateString": "2016-06-21T04:02:43.000Z",
-    "trend": 4,
-    "direction": "Flat",
-    "device": "share2",
-    "type": "sgv",
-    "glucose": 127
   }
 ]
