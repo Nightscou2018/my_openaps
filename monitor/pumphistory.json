@@ -1,5 +1,18 @@
 [
   {
+    "_type": "ChangeParadigmLinkID", 
+    "links": [
+      "322099", 
+      "aec2a7", 
+      "c457d6"
+    ], 
+    "_description": "ChangeParadigmLinkID 2016-06-21T11:18:27 head[2], body[14] op[0x3c]", 
+    "timestamp": "2016-06-21T11:18:27", 
+    "_body": "3d322099aec2a73ec457d6000000", 
+    "_head": "3c00", 
+    "_date": "5b920b1510"
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "duration (min)": 30, 
     "_description": "TempBasalDuration 2016-06-21T11:06:24 head[2], body[0] op[0x16]", 
