@@ -1,5 +1,38 @@
-Agent pid 17751
+Agent pid 18224
 [
+  {
+    "_id": "5768d0e62ac0a07cf65e683a",
+    "sgv": 129,
+    "date": 1466486867000,
+    "dateString": "2016-06-21T05:27:47.000Z",
+    "trend": 3,
+    "direction": "FortyFiveUp",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 129
+  },
+  {
+    "_id": "5768cfba2ac0a07cf65e661b",
+    "sgv": 120,
+    "date": 1466486563000,
+    "dateString": "2016-06-21T05:22:43.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 120
+  },
+  {
+    "_id": "5768ce8e2ac0a07cf65e63fc",
+    "sgv": 116,
+    "date": 1466486263000,
+    "dateString": "2016-06-21T05:17:43.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 116
+  },
   {
     "_id": "5768cd622ac0a07cf65e61dd",
     "sgv": 111,
@@ -76,38 +109,5 @@ Agent pid 17751
     "device": "share2",
     "type": "sgv",
     "glucose": 104
-  },
-  {
-    "_id": "5768c4022ac0a07cf65e50e5",
-    "sgv": 105,
-    "date": 1466483564000,
-    "dateString": "2016-06-21T04:32:44.000Z",
-    "trend": 4,
-    "direction": "Flat",
-    "device": "share2",
-    "type": "sgv",
-    "glucose": 105
-  },
-  {
-    "_id": "5768c2d62ac0a07cf65e4ec6",
-    "sgv": 105,
-    "date": 1466483264000,
-    "dateString": "2016-06-21T04:27:44.000Z",
-    "trend": 4,
-    "direction": "Flat",
-    "device": "share2",
-    "type": "sgv",
-    "glucose": 105
-  },
-  {
-    "_id": "5768c1aa2ac0a07cf65e4ca6",
-    "sgv": 106,
-    "date": 1466482967000,
-    "dateString": "2016-06-21T04:22:47.000Z",
-    "trend": 5,
-    "direction": "FortyFiveDown",
-    "device": "share2",
-    "type": "sgv",
-    "glucose": 106
   }
 ]
