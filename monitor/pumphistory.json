@@ -1,5 +1,17 @@
 [
   {
+    "programmed": 6.0, 
+    "_type": "Bolus", 
+    "type": "normal", 
+    "_description": "Bolus 2016-06-22T22:32:36 head[4], body[0] op[0x01]", 
+    "duration": 0, 
+    "timestamp": "2016-06-22T22:32:36", 
+    "_body": "", 
+    "_head": "013c3c00", 
+    "amount": 6.0, 
+    "_date": "64a0561610"
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "duration (min)": 30, 
     "_description": "TempBasalDuration 2016-06-22T22:06:25 head[2], body[0] op[0x16]", 
