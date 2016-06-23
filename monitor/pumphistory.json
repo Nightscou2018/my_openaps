@@ -1,5 +1,32 @@
 [
   {
+    "_type": "PumpSuspend", 
+    "_description": "PumpSuspend 2016-06-23T06:47:07 head[2], body[0] op[0x1e]", 
+    "timestamp": "2016-06-23T06:47:07", 
+    "_body": "", 
+    "_head": "1e00", 
+    "_date": "47af061710"
+  }, 
+  {
+    "_type": "TempBasalDuration", 
+    "duration (min)": 30, 
+    "_description": "TempBasalDuration 2016-06-23T06:41:29 head[2], body[0] op[0x16]", 
+    "timestamp": "2016-06-23T06:41:29", 
+    "_body": "", 
+    "_head": "1601", 
+    "_date": "5da9065710"
+  }, 
+  {
+    "_type": "TempBasal", 
+    "temp": "absolute", 
+    "_description": "TempBasal 2016-06-23T06:41:29 head[2], body[1] op[0x33]", 
+    "timestamp": "2016-06-23T06:41:29", 
+    "_body": "00", 
+    "_head": "3339", 
+    "rate": 1.425, 
+    "_date": "5da9065710"
+  }, 
+  {
     "_type": "OldBolusWizardChange", 
     "stale": {
       "insulin_sensitivies": [
