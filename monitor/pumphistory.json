@@ -1,5 +1,22 @@
 [
   {
+    "_type": "CalBGForPH", 
+    "_description": "CalBGForPH 2016-06-26T20:40:56 head[2], body[0] op[0x0a]", 
+    "timestamp": "2016-06-26T20:40:56", 
+    "_body": "", 
+    "_head": "0a5a", 
+    "amount": 90, 
+    "_date": "78a8341a10"
+  }, 
+  {
+    "_type": "PumpResume", 
+    "_description": "PumpResume 2016-06-26T20:40:54 head[2], body[0] op[0x1f]", 
+    "timestamp": "2016-06-26T20:40:54", 
+    "_body": "", 
+    "_head": "1f00", 
+    "_date": "76a8141a10"
+  }, 
+  {
     "_type": "PumpSuspend", 
     "_description": "PumpSuspend 2016-06-26T20:09:13 head[2], body[0] op[0x1e]", 
     "timestamp": "2016-06-26T20:09:13", 
@@ -193,29 +210,5 @@
     "_head": "01323200", 
     "amount": 5.0, 
     "_date": "4494511a10"
-  }, 
-  {
-    "programmed": 3.0, 
-    "_type": "Bolus", 
-    "type": "normal", 
-    "_description": "Bolus 2016-06-26T16:33:54 head[4], body[0] op[0x01]", 
-    "duration": 0, 
-    "timestamp": "2016-06-26T16:33:54", 
-    "_body": "", 
-    "_head": "011e1e00", 
-    "amount": 3.0, 
-    "_date": "76a1501a10"
-  }, 
-  {
-    "programmed": 5.0, 
-    "_type": "Bolus", 
-    "type": "normal", 
-    "_description": "Bolus 2016-06-26T16:19:23 head[4], body[0] op[0x01]", 
-    "duration": 0, 
-    "timestamp": "2016-06-26T16:19:23", 
-    "_body": "", 
-    "_head": "01323200", 
-    "amount": 5.0, 
-    "_date": "5793501a10"
   }
 ]
