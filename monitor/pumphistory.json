@@ -1,5 +1,32 @@
 [
   {
+    "_type": "AlarmPump", 
+    "_description": "AlarmPump 2016-06-27T23:18:34 head[4], body[0] op[0x06]", 
+    "timestamp": "2016-06-27T23:18:34", 
+    "_body": "", 
+    "_head": "063e0331", 
+    "_date": "6292575b10"
+  }, 
+  {
+    "_type": "TempBasalDuration", 
+    "duration (min)": 30, 
+    "_description": "TempBasalDuration 2016-06-27T23:16:33 head[2], body[0] op[0x16]", 
+    "timestamp": "2016-06-27T23:16:33", 
+    "_body": "", 
+    "_head": "1601", 
+    "_date": "6190175b10"
+  }, 
+  {
+    "_type": "TempBasal", 
+    "temp": "absolute", 
+    "_description": "TempBasal 2016-06-27T23:16:33 head[2], body[1] op[0x33]", 
+    "timestamp": "2016-06-27T23:16:33", 
+    "_body": "00", 
+    "_head": "3394", 
+    "rate": 3.7, 
+    "_date": "6190175b10"
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "duration (min)": 30, 
     "_description": "TempBasalDuration 2016-06-27T23:11:31 head[2], body[0] op[0x16]", 
