@@ -175,11 +175,11 @@
   }, 
   {
     "bolus": {
+      "programmed": 4, 
       "_type": "Bolus", 
       "_description": "Bolus 2016-06-29T23:58:27 head[4], body[0] op[0x01]", 
       "timestamp": "2016-06-29T23:58:27", 
       "_body": "", 
-      "programmed": 4, 
       "_head": "01282800", 
       "amount": 4, 
       "duration": 0, 
@@ -197,11 +197,11 @@
   }, 
   {
     "bolus": {
+      "programmed": 6, 
       "_type": "Bolus", 
       "_description": "Bolus 2016-06-29T23:52:32 head[4], body[0] op[0x01]", 
       "timestamp": "2016-06-29T23:52:32", 
       "_body": "", 
-      "programmed": 6, 
       "_head": "013c3c00", 
       "amount": 6, 
       "duration": 0, 
@@ -277,11 +277,11 @@
   }, 
   {
     "bolus": {
+      "programmed": 5, 
       "_type": "Bolus", 
       "_description": "Bolus 2016-06-29T23:03:01 head[4], body[0] op[0x01]", 
       "timestamp": "2016-06-29T23:03:01", 
       "_body": "", 
-      "programmed": 5, 
       "_head": "01323200", 
       "amount": 5, 
       "duration": 0, 
@@ -357,11 +357,11 @@
   }, 
   {
     "bolus": {
+      "programmed": 6, 
       "_type": "Bolus", 
       "_description": "Bolus 2016-06-29T22:34:47 head[4], body[0] op[0x01]", 
       "timestamp": "2016-06-29T22:34:47", 
       "_body": "", 
-      "programmed": 6, 
       "_head": "013c3c00", 
       "amount": 6, 
       "duration": 0, 
@@ -408,11 +408,11 @@
   }, 
   {
     "bolus": {
+      "programmed": 4, 
       "_type": "Bolus", 
       "_description": "Bolus 2016-06-29T21:53:11 head[4], body[0] op[0x01]", 
       "timestamp": "2016-06-29T21:53:11", 
       "_body": "", 
-      "programmed": 4, 
       "_head": "01282800", 
       "amount": 4, 
       "duration": 0, 
