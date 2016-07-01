@@ -1,5 +1,13 @@
 [
   {
+    "_type": "PumpSuspend", 
+    "_description": "PumpSuspend 2016-07-01T08:22:13 head[2], body[0] op[0x1e]", 
+    "timestamp": "2016-07-01T08:22:13", 
+    "_body": "", 
+    "_head": "1e00", 
+    "_date": "4dd6080110"
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "duration (min)": 30, 
     "_description": "TempBasalDuration 2016-07-01T08:11:31 head[2], body[0] op[0x16]", 
@@ -394,24 +402,5 @@
     "_head": "3332", 
     "rate": 1.25, 
     "_date": "49e0044110"
-  }, 
-  {
-    "_type": "TempBasalDuration", 
-    "duration (min)": 30, 
-    "_description": "TempBasalDuration 2016-07-01T04:11:31 head[2], body[0] op[0x16]", 
-    "timestamp": "2016-07-01T04:11:31", 
-    "_body": "", 
-    "_head": "1601", 
-    "_date": "5fcb044110"
-  }, 
-  {
-    "_type": "TempBasal", 
-    "temp": "absolute", 
-    "_description": "TempBasal 2016-07-01T04:11:31 head[2], body[1] op[0x33]", 
-    "timestamp": "2016-07-01T04:11:31", 
-    "_body": "00", 
-    "_head": "3332", 
-    "rate": 1.25, 
-    "_date": "5fcb044110"
   }
 ]
