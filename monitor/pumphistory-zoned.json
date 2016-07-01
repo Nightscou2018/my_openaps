@@ -1,5 +1,33 @@
 [
   {
+    "_type": "CalBGForPH", 
+    "_description": "CalBGForPH 2016-07-01T10:47:05 head[2], body[0] op[0x0a]", 
+    "timestamp": "2016-07-01T10:47:05-07:00", 
+    "_body": "", 
+    "_head": "0a87", 
+    "amount": 135, 
+    "_date": "45ef2a0110"
+  }, 
+  {
+    "_type": "TempBasalDuration", 
+    "_description": "TempBasalDuration 2016-07-01T10:36:32 head[2], body[0] op[0x16]", 
+    "timestamp": "2016-07-01T10:36:32-07:00", 
+    "_body": "", 
+    "_head": "1601", 
+    "duration (min)": 30, 
+    "_date": "60e40a4110"
+  }, 
+  {
+    "_type": "TempBasal", 
+    "temp": "absolute", 
+    "_description": "TempBasal 2016-07-01T10:36:32 head[2], body[1] op[0x33]", 
+    "timestamp": "2016-07-01T10:36:32-07:00", 
+    "_body": "00", 
+    "_head": "3300", 
+    "rate": 0.0, 
+    "_date": "60e40a4110"
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "_description": "TempBasalDuration 2016-07-01T10:21:34 head[2], body[0] op[0x16]", 
     "timestamp": "2016-07-01T10:21:34-07:00", 
@@ -365,43 +393,5 @@
     "_head": "3339", 
     "rate": 1.425, 
     "_date": "5af8064110"
-  }, 
-  {
-    "_type": "TempBasalDuration", 
-    "_description": "TempBasalDuration 2016-07-01T06:46:26 head[2], body[0] op[0x16]", 
-    "timestamp": "2016-07-01T06:46:26-07:00", 
-    "_body": "", 
-    "_head": "1601", 
-    "duration (min)": 30, 
-    "_date": "5aee064110"
-  }, 
-  {
-    "_type": "TempBasal", 
-    "temp": "absolute", 
-    "_description": "TempBasal 2016-07-01T06:46:26 head[2], body[1] op[0x33]", 
-    "timestamp": "2016-07-01T06:46:26-07:00", 
-    "_body": "00", 
-    "_head": "3358", 
-    "rate": 2.2, 
-    "_date": "5aee064110"
-  }, 
-  {
-    "_type": "TempBasalDuration", 
-    "_description": "TempBasalDuration 2016-07-01T06:26:29 head[2], body[0] op[0x16]", 
-    "timestamp": "2016-07-01T06:26:29-07:00", 
-    "_body": "", 
-    "_head": "1601", 
-    "duration (min)": 30, 
-    "_date": "5dda064110"
-  }, 
-  {
-    "_type": "TempBasal", 
-    "temp": "absolute", 
-    "_description": "TempBasal 2016-07-01T06:26:29 head[2], body[1] op[0x33]", 
-    "timestamp": "2016-07-01T06:26:29-07:00", 
-    "_body": "00", 
-    "_head": "3339", 
-    "rate": 1.425, 
-    "_date": "5dda064110"
   }
 ]
