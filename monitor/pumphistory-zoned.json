@@ -1,5 +1,17 @@
 [
   {
+    "_type": "Bolus", 
+    "_description": "Bolus 2016-07-05T18:37:07 head[4], body[0] op[0x01]", 
+    "timestamp": "2016-07-05T18:37:07-07:00", 
+    "_body": "", 
+    "programmed": 6.2, 
+    "_head": "013e3e00", 
+    "amount": 6.2, 
+    "duration": 0, 
+    "type": "normal", 
+    "_date": "47e5520510"
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "_description": "TempBasalDuration 2016-07-05T18:36:45 head[2], body[0] op[0x16]", 
     "timestamp": "2016-07-05T18:36:45-07:00", 
