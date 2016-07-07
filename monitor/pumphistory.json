@@ -1,5 +1,17 @@
 [
   {
+    "programmed": 4.0, 
+    "_type": "Bolus", 
+    "type": "normal", 
+    "_description": "Bolus 2016-07-06T19:09:21 head[4], body[0] op[0x01]", 
+    "duration": 0, 
+    "timestamp": "2016-07-06T19:09:21", 
+    "_body": "", 
+    "_head": "01282800", 
+    "amount": 4.0, 
+    "_date": "55c9930610"
+  }, 
+  {
     "_type": "CalBGForPH", 
     "_description": "CalBGForPH 2016-07-06T18:32:15 head[2], body[0] op[0x0a]", 
     "timestamp": "2016-07-06T18:32:15", 
@@ -95,17 +107,5 @@
     "_head": "013c3c00", 
     "amount": 6.0, 
     "_date": "66c4500610"
-  }, 
-  {
-    "programmed": 6.0, 
-    "_type": "Bolus", 
-    "type": "normal", 
-    "_description": "Bolus 2016-07-06T14:36:12 head[4], body[0] op[0x01]", 
-    "duration": 0, 
-    "timestamp": "2016-07-06T14:36:12", 
-    "_body": "", 
-    "_head": "013c3c00", 
-    "amount": 6.0, 
-    "_date": "4ce44e0610"
   }
 ]
