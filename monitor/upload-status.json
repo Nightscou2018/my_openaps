@@ -1,0 +1,53 @@
+{
+  "device": "openaps://raspberrypi", 
+  "pump": {
+    "battery": {
+      "status": "normal", 
+      "voltage": 1.27
+    }, 
+    "status": {
+      "status": "normal", 
+      "timestamp": "2016-07-07T16:56:09.000Z", 
+      "bolusing": false, 
+      "suspended": false
+    }, 
+    "reservoir": 120.8, 
+    "clock": "2016-07-07T09:56:12"
+  }, 
+  "openaps": {
+    "suggested": {
+      "bg": 146, 
+      "temp": "absolute", 
+      "snoozeBG": 73, 
+      "timestamp": "2016-07-07T16:55:58.000Z", 
+      "rate": 0, 
+      "reason": "Eventual BG 73<90, Snooze BG 73, setting -2.14U/hr. Setting neutral temp basal of 0U/hr", 
+      "eventualBG": 73, 
+      "duration": 30, 
+      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 9 BGI: -4.9", 
+      "tick": -2
+    }, 
+    "iob": {
+      "netbasalinsulin": 5.85, 
+      "timestamp": "2016-07-07T16:55:52.000Z", 
+      "activity": 0.0327, 
+      "basaliob": 2.729, 
+      "hightempinsulin": 5.85, 
+      "bolussnooze": 0, 
+      "iob": 2.729
+    }, 
+    "enacted": {
+      "bg": 146, 
+      "temp": "absolute", 
+      "snoozeBG": 73, 
+      "recieved": true, 
+      "reason": "Eventual BG 73<90, Snooze BG 73, setting -2.14U/hr. Setting neutral temp basal of 0U/hr", 
+      "rate": 0, 
+      "eventualBG": 73, 
+      "timestamp": "2016-07-07T16:56:04.000Z", 
+      "duration": 30, 
+      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 9 BGI: -4.9", 
+      "tick": -2
+    }
+  }
+}
