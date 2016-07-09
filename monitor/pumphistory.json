@@ -1,5 +1,17 @@
 [
   {
+    "programmed": 6.0, 
+    "_type": "Bolus", 
+    "type": "normal", 
+    "_description": "Bolus 2016-07-08T21:28:29 head[4], body[0] op[0x01]", 
+    "duration": 0, 
+    "timestamp": "2016-07-08T21:28:29", 
+    "_body": "", 
+    "_head": "013c3c00", 
+    "amount": 6.0, 
+    "_date": "5ddc550810"
+  }, 
+  {
     "_type": "LowReservoir", 
     "_description": "LowReservoir 2016-07-08T21:28:31 head[2], body[0] op[0x34]", 
     "timestamp": "2016-07-08T21:28:31", 
