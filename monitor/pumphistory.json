@@ -1,5 +1,63 @@
 [
   {
+    "_type": "BolusWizard", 
+    "bg": 0, 
+    "bg_target_high": 120, 
+    "correction_estimate": 0.0, 
+    "unknown_byte[10]": 0, 
+    "_description": "BolusWizard 2016-07-10T19:57:30 head[2], body[13] op[0x5b]", 
+    "timestamp": "2016-07-10T19:57:30", 
+    "_body": "3b50091e5a0041000000004178", 
+    "carb_input": 59, 
+    "_head": "5b00", 
+    "unabsorbed_insulin_total": 0.0, 
+    "_byte[5]": 0, 
+    "unabsorbed_insulin_count": "??", 
+    "_byte[7]": 0, 
+    "_date": "5ef9130a10", 
+    "bolus_estimate": 6.5, 
+    "appended": [
+      {
+        "_type": "UnabsorbedInsulinBolus", 
+        "_description": "UnabsorbedInsulinBolus unknown head[20], body[0] op[0x5c]", 
+        "data": [
+          {
+            "amount": 6.0, 
+            "age": 186
+          }, 
+          {
+            "amount": 5.0, 
+            "age": 266
+          }, 
+          {
+            "amount": 4.0, 
+            "age": 316
+          }, 
+          {
+            "amount": 3.0, 
+            "age": 396
+          }, 
+          {
+            "amount": 2.0, 
+            "age": 426
+          }, 
+          {
+            "amount": 4.1, 
+            "age": 456
+          }
+        ], 
+        "_body": "", 
+        "_head": "5c14f0bac0c80ad0a03cd0788cd050aad0a4c8d0", 
+        "_date": ""
+      }
+    ], 
+    "unknown_byte[8]": 0, 
+    "carb_ratio": 9, 
+    "food_estimate": 6.5, 
+    "bg_target_low": 90, 
+    "sensitivity": 30
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "duration (min)": 30, 
     "_description": "TempBasalDuration 2016-07-10T19:21:32 head[2], body[0] op[0x16]", 
@@ -133,17 +191,5 @@
     "_head": "013c3c00", 
     "amount": 6.0, 
     "_date": "4af6500a10"
-  }, 
-  {
-    "programmed": 5.0, 
-    "_type": "Bolus", 
-    "type": "normal", 
-    "_description": "Bolus 2016-07-10T15:36:35 head[4], body[0] op[0x01]", 
-    "duration": 0, 
-    "timestamp": "2016-07-10T15:36:35", 
-    "_body": "", 
-    "_head": "01323200", 
-    "amount": 5.0, 
-    "_date": "63e44f0a10"
   }
 ]
