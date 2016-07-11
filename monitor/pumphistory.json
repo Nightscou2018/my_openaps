@@ -1,5 +1,17 @@
 [
   {
+    "programmed": 1.7, 
+    "_type": "Bolus", 
+    "type": "square", 
+    "_description": "Bolus 2016-07-10T20:47:49 head[4], body[0] op[0x01]", 
+    "duration": 60, 
+    "timestamp": "2016-07-10T20:47:49", 
+    "_body": "", 
+    "_head": "01111102", 
+    "amount": 1.7, 
+    "_date": "71efb40a10"
+  }, 
+  {
     "programmed": 3.5, 
     "_type": "Bolus", 
     "type": "normal", 
