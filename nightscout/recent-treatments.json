@@ -1,0 +1,18 @@
+[
+  {
+    "_type": "Prime", 
+    "_description": "Prime 2016-07-12T23:56:51 head[5], body[0] op[0x03]", 
+    "notes": "Prime 722 ", 
+    "timestamp": "2016-07-12T23:56:51-07:00", 
+    "_body": "", 
+    "_head": "0300050005", 
+    "enteredBy": "openaps://medtronic/722", 
+    "amount": 0.5, 
+    "medtronic": "mm://openaps/mm-format-ns-treatments/Prime", 
+    "eventType": "Note", 
+    "fixed": 0.5, 
+    "type": "fixed", 
+    "created_at": "2016-07-12T23:56:51-07:00", 
+    "_date": "73f8170c10"
+  }
+]
