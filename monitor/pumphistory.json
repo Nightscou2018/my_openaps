@@ -1,5 +1,33 @@
 [
   {
+    "_type": "Model522ResultTotals", 
+    "_description": "Model522ResultTotals 2016-07-13T00:00:00 head[1], body[41] op[0x6d]", 
+    "timestamp": "2016-07-13T00:00:00", 
+    "_body": "0510bf5a0c0500000aa6047e2a06283a003306283a00e00e00c40c0484490b010100090c00e8000000", 
+    "_head": "6d", 
+    "_date": "6c90"
+  }, 
+  {
+    "_type": "ResultDailyTotal", 
+    "_description": "ResultDailyTotal 2016-07-13T00:00:00 head[5], body[0] op[0x07]", 
+    "timestamp": "2016-07-13T00:00:00", 
+    "_body": "", 
+    "valid_date": "2016-07-12", 
+    "_head": "0700000aa6", 
+    "_date": "6c90"
+  }, 
+  {
+    "_type": "Prime", 
+    "type": "fixed", 
+    "_description": "Prime 2016-07-12T23:56:51 head[5], body[0] op[0x03]", 
+    "timestamp": "2016-07-12T23:56:51", 
+    "_body": "", 
+    "fixed": 0.5, 
+    "_head": "0300050005", 
+    "amount": 0.5, 
+    "_date": "73f8170c10"
+  }, 
+  {
     "_type": "Prime", 
     "type": "manual", 
     "_description": "Prime 2016-07-12T23:54:24 head[5], body[0] op[0x03]", 
