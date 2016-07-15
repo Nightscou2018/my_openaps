@@ -1,1 +1,1 @@
-{"temp":"absolute","bg":138,"tick":"+2","eventualBG":136,"snoozeBG":136,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 8 BGI: -0.58","reason":"Eventual BG 136>=120, temp 1.6<3.667U/hr","duration":30,"rate":3.65}
+{"temp":"absolute","bg":166,"tick":"+28","eventualBG":207,"snoozeBG":207,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 50 BGI: -0.63","reason":"Eventual BG 207>=120, adj. req. rate:8.4 to maxSafeBasal:4.8, temp 1.6<4.8U/hr","duration":30,"rate":4.8}
