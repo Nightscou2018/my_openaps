@@ -1,4 +1,8 @@
-Sat Jul 16 05:30:01 PDT 2016
+Sat Jul 16 05:36:01 PDT 2016
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT OK
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -21,29 +25,11 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":2,"glucose":115,"avgdelta":-0.333}
-{"duration":26,"rate":1.25,"temp":"absolute"}
-{"netbasalinsulin":0.3,"activity":0.0016,"basaliob":0.028,"hightempinsulin":0.45,"bolussnooze":0,"iob":0.033}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.25,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
+{"delta":1,"glucose":122,"avgdelta":3}
+{"duration":26,"rate":3.25,"temp":"absolute"}
+{"netbasalinsulin":-0.2,"activity":-0.0022,"basaliob":0.007,"hightempinsulin":0.35,"bolussnooze":0,"iob":0.007}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.45,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":115,"tick":"+2","eventualBG":114,"snoozeBG":114,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 0 BGI: -0.24","reason":"114-114 in range: no temp required, temp 1.25 ~ req 1.25U/hr"}
-No action required
-pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-Nothing to upload.
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
+{"temp":"absolute","bg":122,"tick":"+1","eventualBG":124,"snoozeBG":124,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 2 BGI: 0.33","reason":"Eventual BG 124>=120, 26m@1.800 = 0.780 > req 0.6333333333333333+0.1U","duration":30,"rate":2.7}
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
