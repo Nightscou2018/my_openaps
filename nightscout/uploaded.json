@@ -24,8 +24,8 @@
     "enteredBy": "openaps://medtronic/722", 
     "rate": 1.25, 
     "eventType": "Temp Basal", 
-    "duration": "30", 
+    "duration": 30, 
     "medtronic": "mm://openaps/mm-format-ns-treatments/Temp Basal", 
-    "absolute": "1.25"
+    "absolute": 1.25
   }
 ]
