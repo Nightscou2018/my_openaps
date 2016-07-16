@@ -1,4 +1,4 @@
-Sat Jul 16 01:48:01 PDT 2016
+Sat Jul 16 01:54:01 PDT 2016
 reporting settings/basal_profile.json
 get-profile://text/shell/settings/profile.json
 reporting settings/profile.json
@@ -14,27 +14,27 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":-2,"glucose":183,"avgdelta":-4}
-{"duration":26,"rate":1.425,"temp":"absolute"}
-{"netbasalinsulin":1.6,"activity":0.0545,"basaliob":0.531,"hightempinsulin":1.6,"bolussnooze":0,"iob":2.116}
+{"delta":-1,"glucose":182,"avgdelta":-1.667}
+{"duration":26,"rate":2.125,"temp":"absolute"}
+{"netbasalinsulin":1.7,"activity":0.0511,"basaliob":0.582,"hightempinsulin":1.7,"bolussnooze":0,"iob":1.957}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.1,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":183,"tick":-2,"eventualBG":133,"snoozeBG":133,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 13 BGI: -8.18","reason":"Eventual BG 133>=120, temp 1.425<2.14U/hr","duration":30,"rate":2.15}
+{"temp":"absolute","bg":182,"tick":-1,"eventualBG":141,"snoozeBG":141,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 18 BGI: -7.66","reason":"Eventual BG 141>=120, temp 2.125<3.04U/hr","duration":30,"rate":3.05}
 pump://JSON/set_temp_basal/enact/enacted.json
 reporting enact/enacted.json
 {
-  "bg": 183,
+  "bg": 182,
   "temp": "absolute",
-  "snoozeBG": 133,
+  "snoozeBG": 141,
   "recieved": true,
-  "rate": 2.125,
-  "reason": "Eventual BG 133>=120, temp 1.425<2.14U/hr",
-  "eventualBG": 133,
-  "timestamp": "2016-07-16T01:45:58.931322",
+  "rate": 3.025,
+  "reason": "Eventual BG 141>=120, temp 2.125<3.04U/hr",
+  "eventualBG": 141,
+  "timestamp": "2016-07-16T01:51:03.074248",
   "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 13 BGI: -8.18",
-  "tick": -2
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 18 BGI: -7.66",
+  "tick": -1
 }pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
@@ -47,7 +47,6 @@ openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
 
 tz://JSON/rezone/monitor/pumphistory-zoned.json
 reporting monitor/pumphistory-zoned.json
-Nothing to upload.
 ns://JSON/shell/nightscout/uploaded.json
 reporting nightscout/uploaded.json
 all done.
