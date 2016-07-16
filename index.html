@@ -1,4 +1,12 @@
-Sat Jul 16 02:42:01 PDT 2016
+Sat Jul 16 02:48:01 PDT 2016
+pump://JSON/read_settings/settings/settings.json
+reporting settings/settings.json
+pump://JSON/read_bg_targets/settings/bg_targets_raw.json
+reporting settings/bg_targets_raw.json
+pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
+reporting settings/insulin_sensitivities_raw.json
+pump://JSON/read_basal_profile_std/settings/basal_profile.json
+reporting settings/basal_profile.json
 get-profile://text/shell/settings/profile.json
 reporting settings/profile.json
 curl://text/shell/monitor/glucose.json
@@ -13,29 +21,15 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":-2,"glucose":180,"avgdelta":0.667}
-{"duration":26,"rate":3.45,"temp":"absolute"}
-{"netbasalinsulin":3.4,"activity":0.0252,"basaliob":1.89,"hightempinsulin":3.4,"bolussnooze":1.491,"iob":3.488}
+{"delta":-5,"glucose":175,"avgdelta":-1.333}
+{"duration":26,"rate":1.1,"temp":"absolute"}
+{"netbasalinsulin":3.25,"activity":0.0241,"basaliob":1.826,"hightempinsulin":3.25,"bolussnooze":1.458,"iob":3.367}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.1,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
-Setting neutral temp basal of 1.1U/hr
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":180,"tick":-2,"eventualBG":80,"snoozeBG":147,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 5 BGI: -3.78","reason":"Eventual BG 80<90, bolus snooze: eventual BG range 80-147; setting current basal of 1.1 as temp. Setting neutral temp basal of 1.1U/hr","duration":30,"rate":1.1}
-pump://JSON/set_temp_basal/enact/enacted.json
-reporting enact/enacted.json
-{
-  "bg": 180,
-  "temp": "absolute",
-  "snoozeBG": 147,
-  "recieved": true,
-  "rate": 1.1,
-  "reason": "Eventual BG 80<90, bolus snooze: eventual BG range 80-147; setting current basal of 1.1 as temp. Setting neutral temp basal of 1.1U/hr",
-  "eventualBG": 80,
-  "timestamp": "2016-07-16T02:41:02.436438",
-  "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 5 BGI: -3.78",
-  "tick": -2
-}pump://JSON/read_battery_status/monitor/battery.json
+{"temp":"absolute","bg":175,"tick":-5,"eventualBG":88,"snoozeBG":154,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 14 BGI: -3.61","reason":"Eventual BG 88<90, bolus snooze: eventual BG range 88-154, temp 1.1 ~ req 1.1U/hr"}
+No action required
+pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
 reporting monitor/reservoir.json
