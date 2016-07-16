@@ -1,38 +1,4 @@
-Sat Jul 16 00:00:01 PDT 2016
-reporting settings/profile.json
-curl://text/shell/monitor/glucose.json
-reporting monitor/glucose.json
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-{"delta":-6,"glucose":259,"avgdelta":2}
-{"duration":21,"rate":4.775,"temp":"absolute"}
-{"netbasalinsulin":2.3,"activity":0.1038,"basaliob":0.949,"hightempinsulin":2.4,"bolussnooze":0.03,"iob":4.55}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.3,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-{"temp":"absolute","bg":259,"tick":-6,"eventualBG":152,"snoozeBG":153,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 29 BGI: -15.57","reason":"Eventual BG 152>=120, 21m@3.475 = 1.216 > req 1.01+0.1U","duration":30,"rate":3.3}
-pump://JSON/set_temp_basal/enact/enacted.json
-reporting enact/enacted.json
-{
-  "bg": 259,
-  "temp": "absolute",
-  "snoozeBG": 153,
-  "recieved": true,
-  "rate": 3.275,
-  "reason": "Eventual BG 152>=120, 21m@3.475 = 1.216 > req 1.01+0.1U",
-  "eventualBG": 152,
-  "timestamp": "2016-07-15T23:56:01.595149",
-  "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 29 BGI: -15.57",
-  "tick": -6
+Sat Jul 16 00:06:01 PDT 2016
 }pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
@@ -45,8 +11,12 @@ openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
 
 tz://JSON/rezone/monitor/pumphistory-zoned.json
 reporting monitor/pumphistory-zoned.json
+Nothing to upload.
 ns://JSON/shell/nightscout/uploaded.json
 reporting nightscout/uploaded.json
 all done.
 (pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+mmtune:
+  "setFreq": 916.684,
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
