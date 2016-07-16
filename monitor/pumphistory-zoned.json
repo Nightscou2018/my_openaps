@@ -1,5 +1,29 @@
 [
   {
+    "_type": "Bolus", 
+    "_description": "Bolus 2016-07-16T15:21:20 head[4], body[0] op[0x01]", 
+    "timestamp": "2016-07-16T15:21:20-07:00", 
+    "_body": "", 
+    "programmed": 2.0, 
+    "_head": "01141400", 
+    "amount": 2.0, 
+    "duration": 0, 
+    "type": "normal", 
+    "_date": "54d54f1010"
+  }, 
+  {
+    "_type": "Bolus", 
+    "_description": "Bolus 2016-07-16T15:04:10 head[4], body[0] op[0x01]", 
+    "timestamp": "2016-07-16T15:04:10-07:00", 
+    "_body": "", 
+    "programmed": 1.3, 
+    "_head": "010d0d01", 
+    "amount": 1.3, 
+    "duration": 30, 
+    "type": "square", 
+    "_date": "4ac4af1010"
+  }, 
+  {
     "_type": "LowReservoir", 
     "_description": "LowReservoir 2016-07-16T15:17:05 head[2], body[0] op[0x34]", 
     "timestamp": "2016-07-16T15:17:05-07:00", 
