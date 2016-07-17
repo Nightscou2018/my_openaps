@@ -1,24 +1,37 @@
-Sat Jul 16 21:36:02 PDT 2016
-pump://JSON/read_settings/settings/settings.json
-reporting settings/settings.json
-pump://JSON/read_bg_targets/settings/bg_targets_raw.json
-reporting settings/bg_targets_raw.json
-pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
-reporting settings/insulin_sensitivities_raw.json
-pump://JSON/read_basal_profile_std/settings/basal_profile.json
-reporting settings/basal_profile.json
-get-profile://text/shell/settings/profile.json
-reporting settings/profile.json
-curl://text/shell/monitor/glucose.json
-reporting monitor/glucose.json
-dexcom_with_share://JSON/iter_glucose/monitor/dex_glucose.json
-reporting monitor/dex_glucose.json
-monitor/pumphistory.json  raised  need more than 0 values to unpack
+Sat Jul 16 21:42:01 PDT 2016
 pump://JSON/read_clock/monitor/clock.json
 reporting monitor/clock.json
 pump://JSON/read_temp_basal/monitor/temp_basal.json
 reporting monitor/temp_basal.json
 pump://JSON/iter_pump_hours/monitor/pumphistory.json
+reporting monitor/pumphistory.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+{"delta":2,"glucose":154,"avgdelta":-3}
+{"duration":21,"rate":1.7,"temp":"absolute"}
+{"netbasalinsulin":0.85,"activity":0.0252,"basaliob":0.22,"hightempinsulin":1.55,"bolussnooze":0,"iob":0.765}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.3,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
+determine-basal://text/shell/enact/suggested.json
+reporting enact/suggested.json
+{"temp":"absolute","bg":154,"tick":"+2","eventualBG":133,"snoozeBG":133,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 2 BGI: -3.78","reason":"Eventual BG 133>=120, temp 1.7<1.94U/hr","duration":30,"rate":1.95}
+pump://JSON/set_temp_basal/enact/enacted.json
+reporting enact/enacted.json
+{
+  "bg": 154,
+  "temp": "absolute",
+  "snoozeBG": 133,
+  "recieved": true,
+  "rate": 1.95,
+  "reason": "Eventual BG 133>=120, temp 1.7<1.94U/hr",
+  "eventualBG": 133,
+  "timestamp": "2016-07-16T21:41:02.761843",
+  "duration": 30,
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 2 BGI: -3.78",
+  "tick": "+2"
+}monitor/battery.json  raised  bytearray index out of range
+pump://JSON/read_battery_status/monitor/battery.json
 Traceback (most recent call last):
   File "/usr/local/bin/openaps-report", line 4, in <module>
     __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-report')
@@ -38,17 +51,13 @@ Traceback (most recent call last):
     output = task.method(args, app)
   File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 45, in __call__
     output = self.main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 639, in main
-    for rec in self.range( ):
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 67, in __call__
-    for record in page:
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 46, in download_page
-    for record in self.find_records(page):
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 157, in find_records
-    decoder = history.HistoryPage(response.data, self.inst)
-  File "/usr/local/lib/python2.7/dist-packages/decocare/history.py", line 777, in __init__
-    if lib.BangInt(crc) != computed:
-  File "/usr/local/lib/python2.7/dist-packages/decocare/lib.py", line 235, in BangInt
-    ( x, y ) = ints
-ValueError: need more than 0 values to unpack
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 333, in main
+    return getattr(self.pump.model, name)(**self.get_params(args))
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
+    self.validate( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 17, in validate
+    data = self.response.getData( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 701, in getData
+    volt = lib.BangInt((bd[1], bd[2]))
+IndexError: bytearray index out of range
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
