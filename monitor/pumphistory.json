@@ -2,6 +2,25 @@
   {
     "_type": "TempBasalDuration", 
     "duration (min)": 30, 
+    "_description": "TempBasalDuration 2016-07-17T06:21:40 head[2], body[0] op[0x16]", 
+    "timestamp": "2016-07-17T06:21:40", 
+    "_body": "", 
+    "_head": "1601", 
+    "_date": "68d5065110"
+  }, 
+  {
+    "_type": "TempBasal", 
+    "temp": "absolute", 
+    "_description": "TempBasal 2016-07-17T06:21:40 head[2], body[1] op[0x33]", 
+    "timestamp": "2016-07-17T06:21:40", 
+    "_body": "00", 
+    "_head": "3339", 
+    "rate": 1.425, 
+    "_date": "68d5065110"
+  }, 
+  {
+    "_type": "TempBasalDuration", 
+    "duration (min)": 30, 
     "_description": "TempBasalDuration 2016-07-17T06:11:40 head[2], body[0] op[0x16]", 
     "timestamp": "2016-07-17T06:11:40", 
     "_body": "", 
@@ -635,33 +654,5 @@
     "_head": "332c", 
     "rate": 1.1, 
     "_date": "6bd5025110"
-  }, 
-  {
-    "_type": "Prime", 
-    "type": "manual", 
-    "_description": "Prime 2016-07-17T02:18:14 head[5], body[0] op[0x03]", 
-    "timestamp": "2016-07-17T02:18:14", 
-    "_body": "", 
-    "fixed": 0.0, 
-    "_head": "0300000000", 
-    "amount": 0.0, 
-    "_date": "4ed2221110"
-  }, 
-  {
-    "_type": "Rewind", 
-    "_description": "Rewind 2016-07-17T02:16:19 head[2], body[0] op[0x21]", 
-    "timestamp": "2016-07-17T02:16:19", 
-    "_body": "", 
-    "_head": "2100", 
-    "_date": "53d0021110"
-  }, 
-  {
-    "_type": "CalBGForPH", 
-    "_description": "CalBGForPH 2016-07-17T02:16:07 head[2], body[0] op[0x0a]", 
-    "timestamp": "2016-07-17T02:16:07", 
-    "_body": "", 
-    "_head": "0ac4", 
-    "amount": 196, 
-    "_date": "47d0221110"
   }
 ]
