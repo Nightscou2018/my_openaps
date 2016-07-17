@@ -1,5 +1,11 @@
 [
   {
+    "trend_arrow": "45_UP", 
+    "system_time": "2016-07-17T23:37:20", 
+    "display_time": "2016-07-17T16:35:40", 
+    "glucose": 123
+  }, 
+  {
     "trend_arrow": "FLAT", 
     "system_time": "2016-07-17T23:32:26", 
     "display_time": "2016-07-17T16:30:45", 
@@ -22,11 +28,5 @@
     "system_time": "2016-07-17T23:17:20", 
     "display_time": "2016-07-17T16:15:39", 
     "glucose": 105
-  }, 
-  {
-    "trend_arrow": "FLAT", 
-    "system_time": "2016-07-17T23:12:28", 
-    "display_time": "2016-07-17T16:10:48", 
-    "glucose": 106
   }
 ]
