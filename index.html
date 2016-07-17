@@ -1,21 +1,18 @@
-Sat Jul 16 18:54:01 PDT 2016
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-{"delta":0,"glucose":69,"avgdelta":-3.333}
-{"duration":21,"rate":0,"temp":"absolute"}
-{"netbasalinsulin":-0.45,"activity":0.0053,"basaliob":-0.477,"hightempinsulin":1.25,"bolussnooze":0,"iob":-0.477}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-{"temp":"absolute","bg":69,"tick":"+0","eventualBG":68,"snoozeBG":68,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -15 BGI: -0.79","reason":"BG 69<70, but 21m left and 0 ~ req 0U/hr: no action required"}
-No action required
-pump://JSON/read_battery_status/monitor/battery.json
+Sat Jul 16 19:00:01 PDT 2016
+reporting enact/enacted.json
+{
+  "bg": 67,
+  "temp": "absolute",
+  "snoozeBG": 71,
+  "recieved": true,
+  "rate": 0.0,
+  "reason": "BG 67<70",
+  "eventualBG": 71,
+  "timestamp": "2016-07-16T18:56:13.242135",
+  "duration": 30,
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -14 BGI: -0.67",
+  "tick": -2
+}pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
 reporting monitor/reservoir.json
@@ -63,3 +60,4 @@ ValueError: No JSON object could be decoded
 No recent treatments to upload
 all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
