@@ -1,4 +1,11 @@
-Sun Jul 17 00:12:02 PDT 2016
+Sun Jul 17 00:18:01 PDT 2016
+pump://JSON/read_settings/settings/settings.json
+reporting settings/settings.json
+pump://JSON/read_bg_targets/settings/bg_targets_raw.json
+reporting settings/bg_targets_raw.json
+pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
+reporting settings/insulin_sensitivities_raw.json
+pump://JSON/read_basal_profile_std/settings/basal_profile.json
 reporting settings/basal_profile.json
 get-profile://text/shell/settings/profile.json
 reporting settings/profile.json
@@ -14,28 +21,15 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":4,"glucose":141,"avgdelta":3}
-{"duration":26,"rate":2.25,"temp":"absolute"}
-{"netbasalinsulin":0.9,"activity":0.0152,"basaliob":0.656,"hightempinsulin":1.35,"bolussnooze":0,"iob":0.895}
+{"delta":2,"glucose":143,"avgdelta":2.333}
+{"duration":26,"rate":2.75,"temp":"absolute"}
+{"netbasalinsulin":1.05,"activity":0.0136,"basaliob":0.804,"hightempinsulin":1.5,"bolussnooze":0,"iob":0.978}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.1,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":141,"tick":"+4","eventualBG":130,"snoozeBG":130,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 16 BGI: -2.28","reason":"Eventual BG 130>=120, temp 2.25<2.767U/hr","duration":30,"rate":2.75}
-pump://JSON/set_temp_basal/enact/enacted.json
-reporting enact/enacted.json
-{
-  "bg": 141,
-  "temp": "absolute",
-  "snoozeBG": 130,
-  "recieved": true,
-  "rate": 2.75,
-  "reason": "Eventual BG 130>=120, temp 2.25<2.767U/hr",
-  "eventualBG": 130,
-  "timestamp": "2016-07-17T00:11:05.246615",
-  "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 16 BGI: -2.28",
-  "tick": "+4"
-}pump://JSON/read_battery_status/monitor/battery.json
+{"temp":"absolute","bg":143,"tick":"+2","eventualBG":126,"snoozeBG":126,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 12 BGI: -2.04","reason":"Eventual BG 126>=120, temp 2.75 >~ req 2.5U/hr"}
+No action required
+pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
 reporting monitor/reservoir.json
