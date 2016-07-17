@@ -1,21 +1,19 @@
-Sat Jul 16 19:42:01 PDT 2016
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-{"delta":2,"glucose":160,"avgdelta":10.667}
-{"duration":21,"rate":4.775,"temp":"absolute"}
-{"netbasalinsulin":1.1,"activity":-0.0044,"basaliob":0.509,"hightempinsulin":2.5,"bolussnooze":0,"iob":0.509}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-{"temp":"absolute","bg":160,"tick":"+2","eventualBG":149,"snoozeBG":149,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 4 BGI: 0.66","reason":"Eventual BG 149>=120, temp 4.775 >~ req 4.133U/hr"}
-No action required
-pump://JSON/read_battery_status/monitor/battery.json
+Sat Jul 16 19:48:01 PDT 2016
+pump://JSON/set_temp_basal/enact/enacted.json
+reporting enact/enacted.json
+{
+  "bg": 177,
+  "temp": "absolute",
+  "snoozeBG": 223,
+  "recieved": true,
+  "rate": 1.175,
+  "reason": "Eventual BG 89<90, but Delta +17 > Exp. Delta 0.8; setting current basal of 1.2 as temp. Setting neutral temp basal of 1.2U/hr",
+  "eventualBG": 89,
+  "timestamp": "2016-07-16T19:46:05.522365",
+  "duration": 30,
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 27 BGI: 0.38",
+  "tick": "+17"
+}pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
 reporting monitor/reservoir.json
