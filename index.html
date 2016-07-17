@@ -1,26 +1,4 @@
-Sat Jul 16 22:24:01 PDT 2016
-pump://JSON/read_settings/settings/settings.json
-reporting settings/settings.json
-pump://JSON/read_bg_targets/settings/bg_targets_raw.json
-reporting settings/bg_targets_raw.json
-pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
-reporting settings/insulin_sensitivities_raw.json
-pump://JSON/read_basal_profile_std/settings/basal_profile.json
-reporting settings/basal_profile.json
-get-profile://text/shell/settings/profile.json
-reporting settings/profile.json
-curl://text/shell/monitor/glucose.json
-reporting monitor/glucose.json
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
+Sat Jul 16 22:30:01 PDT 2016
 {"delta":-7,"glucose":138,"avgdelta":-3.667}
 {"duration":26,"rate":1.3,"temp":"absolute"}
 {"netbasalinsulin":1.15,"activity":0.0287,"basaliob":0.123,"hightempinsulin":1.3,"bolussnooze":2.546,"iob":3.788}
@@ -45,4 +23,12 @@ Nothing to upload.
 ns://JSON/shell/nightscout/uploaded.json
 reporting nightscout/uploaded.json
 all done.
+(pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+mmtune:
+  "setFreq": 916.66,
+pump://JSON/read_clock/monitor/clock.json
+PREFLIGHT FAILED
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
