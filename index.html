@@ -1,6 +1,4 @@
-Sun Jul 17 14:24:02 PDT 2016
-(pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+Sun Jul 17 14:30:01 PDT 2016
 pump://JSON/read_clock/monitor/clock.json
 reporting monitor/clock.json
 PREFLIGHT OK
@@ -41,3 +39,4 @@ Traceback (most recent call last):
     for item in self.dexcom.iter_records(self.RECORD_TYPE):
 AttributeError: 'NoneType' object has no attribute 'iter_records'
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
