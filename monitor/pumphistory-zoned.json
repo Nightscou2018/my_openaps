@@ -1,5 +1,22 @@
 [
   {
+    "_type": "Model522ResultTotals", 
+    "_description": "Model522ResultTotals 2016-07-18T00:00:00 head[1], body[41] op[0x6d]", 
+    "timestamp": "2016-07-18T00:00:00-07:00", 
+    "_body": "0500a95ad40700000ce005c02d072037007307203701f81c00e80d04403b0c030200070c00e8000000", 
+    "_head": "6d", 
+    "_date": "7190"
+  }, 
+  {
+    "_type": "ResultDailyTotal", 
+    "_description": "ResultDailyTotal 2016-07-18T00:00:00 head[5], body[0] op[0x07]", 
+    "timestamp": "2016-07-18T00:00:00-07:00", 
+    "_body": "", 
+    "_head": "0700000ce0", 
+    "valid_date": "2016-07-17", 
+    "_date": "7190"
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "_description": "TempBasalDuration 2016-07-17T23:46:35 head[2], body[0] op[0x16]", 
     "timestamp": "2016-07-17T23:46:35-07:00", 
