@@ -1,30 +1,7 @@
-Mon Jul 18 01:36:01 PDT 2016
-reporting monitor/iob.json
-{"delta":7,"glucose":243,"avgdelta":8.667}
-{"duration":26,"rate":4.4,"temp":"absolute"}
-{"netbasalinsulin":-1.1,"activity":0.0026,"basaliob":-0.36,"hightempinsulin":0.3,"bolussnooze":0.685,"iob":0.947}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.1,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-{"temp":"absolute","bg":243,"tick":"+7","eventualBG":237,"snoozeBG":268,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 22 BGI: -0.39","reason":"Eventual BG 237>=120, adj. req. rate:9.9 to maxSafeBasal:4.4, temp 4.4 >~ req 4.4U/hr"}
-No action required
-pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+Mon Jul 18 01:42:01 PDT 2016
 pump://JSON/read_clock/monitor/clock.json
 mmtune:
   "setFreq": 916.63,
+pump://JSON/read_clock/monitor/clock.json
+PREFLIGHT FAILED
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
