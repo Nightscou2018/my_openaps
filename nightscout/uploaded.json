@@ -1,46 +1,24 @@
 [
   {
     "bolus": {
-      "programmed": 4, 
+      "programmed": 3, 
       "_type": "Bolus", 
-      "_description": "Bolus 2016-07-17T22:08:35 head[4], body[0] op[0x01]", 
-      "timestamp": "2016-07-17T22:08:35-07:00", 
+      "_description": "Bolus 2016-07-17T22:47:31 head[4], body[0] op[0x01]", 
+      "timestamp": "2016-07-17T22:47:31-07:00", 
       "_body": "", 
-      "_head": "01282800", 
-      "amount": 4, 
+      "_head": "011e1e00", 
+      "amount": 3, 
       "duration": 0, 
       "type": "normal", 
-      "_date": "63c8561110"
+      "_date": "5fef561110"
     }, 
-    "timestamp": "2016-07-17T22:08:35-07:00", 
-    "created_at": "2016-07-17T22:08:35-07:00", 
+    "timestamp": "2016-07-17T22:47:31-07:00", 
+    "created_at": "2016-07-17T22:47:31-07:00", 
     "enteredBy": "openaps://medtronic/722", 
-    "insulin": 4, 
+    "insulin": 3, 
     "eventType": "Correction Bolus", 
     "duration": 0, 
-    "notes": "Normal bolus (solo, no bolus wizard).\nProgrammed bolus 4\nDelivered bolus 4\nPercent delivered:  100%", 
-    "medtronic": "mm://openaps/mm-format-ns-treatments/Correction Bolus"
-  }, 
-  {
-    "bolus": {
-      "programmed": 4, 
-      "_type": "Bolus", 
-      "_description": "Bolus 2016-07-17T22:27:13 head[4], body[0] op[0x01]", 
-      "timestamp": "2016-07-17T22:27:13-07:00", 
-      "_body": "", 
-      "_head": "01282800", 
-      "amount": 4, 
-      "duration": 0, 
-      "type": "normal", 
-      "_date": "4ddb561110"
-    }, 
-    "timestamp": "2016-07-17T22:27:13-07:00", 
-    "created_at": "2016-07-17T22:27:13-07:00", 
-    "enteredBy": "openaps://medtronic/722", 
-    "insulin": 4, 
-    "eventType": "Correction Bolus", 
-    "duration": 0, 
-    "notes": "Normal bolus (solo, no bolus wizard).\nProgrammed bolus 4\nDelivered bolus 4\nPercent delivered:  100%", 
+    "notes": "Normal bolus (solo, no bolus wizard).\nProgrammed bolus 3\nDelivered bolus 3\nPercent delivered:  100%", 
     "medtronic": "mm://openaps/mm-format-ns-treatments/Correction Bolus"
   }
 ]
