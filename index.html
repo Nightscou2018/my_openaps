@@ -1,4 +1,12 @@
-Mon Jul 18 20:54:01 PDT 2016
+Mon Jul 18 21:00:01 PDT 2016
+pump://JSON/read_settings/settings/settings.json
+reporting settings/settings.json
+pump://JSON/read_bg_targets/settings/bg_targets_raw.json
+reporting settings/bg_targets_raw.json
+pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
+reporting settings/insulin_sensitivities_raw.json
+pump://JSON/read_basal_profile_std/settings/basal_profile.json
+reporting settings/basal_profile.json
 get-profile://text/shell/settings/profile.json
 reporting settings/profile.json
 curl://text/shell/monitor/glucose.json
@@ -13,28 +21,15 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":12,"glucose":106,"avgdelta":12}
-{"duration":16,"rate":1.3,"temp":"absolute"}
-{"netbasalinsulin":1.45,"activity":0.0437,"basaliob":-0.057,"hightempinsulin":1.65,"bolussnooze":0,"iob":0.775}
+{"delta":9,"glucose":115,"avgdelta":14}
+{"duration":26,"rate":3.525,"temp":"absolute"}
+{"netbasalinsulin":1.5,"activity":0.0379,"basaliob":0.13,"hightempinsulin":1.7,"bolussnooze":0,"iob":0.78}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.3,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":106,"tick":"+12","eventualBG":139,"snoozeBG":139,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 56 BGI: -6.56","reason":"Eventual BG 139>=120, temp 1.3<3.567U/hr","duration":30,"rate":3.55}
-pump://JSON/set_temp_basal/enact/enacted.json
-reporting enact/enacted.json
-{
-  "bg": 106,
-  "temp": "absolute",
-  "snoozeBG": 139,
-  "recieved": true,
-  "rate": 3.525,
-  "reason": "Eventual BG 139>=120, temp 1.3<3.567U/hr",
-  "eventualBG": 139,
-  "timestamp": "2016-07-18T20:51:00.437112",
-  "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 56 BGI: -6.56",
-  "tick": "+12"
-}pump://JSON/read_battery_status/monitor/battery.json
+{"temp":"absolute","bg":115,"tick":"+9","eventualBG":136,"snoozeBG":136,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 44 BGI: -5.68","reason":"Eventual BG 136>=120, temp 3.525 >~ req 3.367U/hr"}
+No action required
+pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
 reporting monitor/reservoir.json
@@ -46,7 +41,9 @@ openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
 
 tz://JSON/rezone/monitor/pumphistory-zoned.json
 reporting monitor/pumphistory-zoned.json
+Nothing to upload.
 ns://JSON/shell/nightscout/uploaded.json
 reporting nightscout/uploaded.json
 all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
