@@ -1,29 +1,112 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-<title>502 - Web server received an invalid response while acting as a gateway or proxy server.</title>
-<style type="text/css">
-<!--
-body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
-fieldset{padding:0 15px 10px 15px;} 
-h1{font-size:2.4em;margin:0;color:#FFF;}
-h2{font-size:1.7em;margin:0;color:#CC0000;} 
-h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
-#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
-background-color:#555555;}
-#content{margin:0 0 0 2%;position:relative;}
-.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
--->
-</style>
-</head>
-<body>
-<div id="header"><h1>Server Error</h1></div>
-<div id="content">
- <div class="content-container"><fieldset>
-  <h2>502 - Web server received an invalid response while acting as a gateway or proxy server.</h2>
-  <h3>There is a problem with the page you are looking for, and it cannot be displayed. When the Web server (while acting as a gateway or proxy) contacted the upstream content server, it received an invalid response from the content server.</h3>
- </fieldset></div>
-</div>
-</body>
-</html>
+[
+  {
+    "_id": "578d83162ac0a07cf661f5bf",
+    "sgv": 190,
+    "date": 1468891870000,
+    "dateString": "2016-07-19T01:31:10.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 190
+  },
+  {
+    "_id": "578d82462ac0a07cf661f5bc",
+    "sgv": 179,
+    "date": 1468891571000,
+    "dateString": "2016-07-19T01:26:11.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 179
+  },
+  {
+    "_id": "578d810c2ac0a07cf661f5bb",
+    "sgv": 183,
+    "date": 1468891277000,
+    "dateString": "2016-07-19T01:21:17.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 183
+  },
+  {
+    "_id": "578d7eb42ac0a07cf661f5b4",
+    "sgv": 179,
+    "date": 1468890671000,
+    "dateString": "2016-07-19T01:11:11.000Z",
+    "trend": 3,
+    "direction": "FortyFiveUp",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 179
+  },
+  {
+    "_id": "578d7d882ac0a07cf661f5af",
+    "sgv": 174,
+    "date": 1468890373000,
+    "dateString": "2016-07-19T01:06:13.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 174
+  },
+  {
+    "_id": "578d7c5c2ac0a07cf661f5ac",
+    "sgv": 169,
+    "date": 1468890072000,
+    "dateString": "2016-07-19T01:01:12.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 169
+  },
+  {
+    "_id": "578d7b302ac0a07cf661f5a6",
+    "sgv": 163,
+    "date": 1468889769000,
+    "dateString": "2016-07-19T00:56:09.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 163
+  },
+  {
+    "_id": "578d7a042ac0a07cf661f5a0",
+    "sgv": 163,
+    "date": 1468889471000,
+    "dateString": "2016-07-19T00:51:11.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 163
+  },
+  {
+    "_id": "578d78d82ac0a07cf661f59f",
+    "sgv": 167,
+    "date": 1468889173000,
+    "dateString": "2016-07-19T00:46:13.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 167
+  },
+  {
+    "_id": "578d77ac2ac0a07cf661f59d",
+    "sgv": 163,
+    "date": 1468888872000,
+    "dateString": "2016-07-19T00:41:12.000Z",
+    "trend": 4,
+    "direction": "Flat",
+    "device": "share2",
+    "type": "sgv",
+    "glucose": 163
+  }
+]
