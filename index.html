@@ -1,9 +1,4 @@
-Mon Jul 18 17:54:01 PDT 2016
-reporting settings/basal_profile.json
-get-profile://text/shell/settings/profile.json
-reporting settings/profile.json
-curl://text/shell/monitor/glucose.json
-reporting monitor/glucose.json
+Mon Jul 18 18:00:01 PDT 2016
 pump://JSON/read_clock/monitor/clock.json
 reporting monitor/clock.json
 pump://JSON/read_temp_basal/monitor/temp_basal.json
@@ -14,27 +9,28 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":4,"glucose":167,"avgdelta":1.333}
-{"duration":26,"rate":2.1,"temp":"absolute"}
-{"netbasalinsulin":3.95,"activity":0.0202,"basaliob":1.519,"hightempinsulin":3.95,"bolussnooze":0,"iob":1.519}
+{"delta":-4,"glucose":163,"avgdelta":-0.333}
+{"duration":27,"rate":3.125,"temp":"absolute"}
+{"netbasalinsulin":4,"activity":0.0197,"basaliob":1.533,"hightempinsulin":4,"bolussnooze":0,"iob":1.533}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
+Setting neutral temp basal of 1.2U/hr
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":167,"tick":"+4","eventualBG":134,"snoozeBG":134,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 13 BGI: -3.03","reason":"Eventual BG 134>=120, temp 2.1<3.133U/hr","duration":30,"rate":3.15}
+{"temp":"absolute","bg":163,"tick":-4,"eventualBG":133,"snoozeBG":133,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 16 BGI: -2.95","reason":"Eventual BG 133>90 but Avg. Delta -4.00 < Exp. Delta -3.7; setting current basal of 1.2 as temp. Setting neutral temp basal of 1.2U/hr","duration":30,"rate":1.2}
 pump://JSON/set_temp_basal/enact/enacted.json
 reporting enact/enacted.json
 {
-  "bg": 167,
+  "bg": 163,
   "temp": "absolute",
-  "snoozeBG": 134,
+  "snoozeBG": 133,
   "recieved": true,
-  "rate": 3.125,
-  "reason": "Eventual BG 134>=120, temp 2.1<3.133U/hr",
-  "eventualBG": 134,
-  "timestamp": "2016-07-18T17:51:45.899033",
+  "rate": 1.175,
+  "reason": "Eventual BG 133>90 but Avg. Delta -4.00 < Exp. Delta -3.7; setting current basal of 1.2 as temp. Setting neutral temp basal of 1.2U/hr",
+  "eventualBG": 133,
+  "timestamp": "2016-07-18T17:56:12.748433",
   "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 13 BGI: -3.03",
-  "tick": "+4"
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 16 BGI: -2.95",
+  "tick": -4
 }pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
@@ -51,3 +47,4 @@ ns://JSON/shell/nightscout/uploaded.json
 reporting nightscout/uploaded.json
 all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
