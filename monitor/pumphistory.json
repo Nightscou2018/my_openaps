@@ -1,5 +1,115 @@
 [
   {
+    "_type": "CalBGForPH", 
+    "_description": "CalBGForPH 2016-07-19T08:29:48 head[2], body[0] op[0x0a]", 
+    "timestamp": "2016-07-19T08:29:48", 
+    "_body": "", 
+    "_head": "0a52", 
+    "amount": 338, 
+    "_date": "70dd281390"
+  }, 
+  {
+    "_type": "Bolus", 
+    "_description": "Bolus 2016-07-19T08:19:52 head[4], body[0] op[0x01]", 
+    "timestamp": "2016-07-19T08:19:52", 
+    "_body": "", 
+    "appended": [
+      {
+        "_type": "UnabsorbedInsulinBolus", 
+        "_description": "UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]", 
+        "data": [
+          {
+            "amount": 0.4, 
+            "age": 58
+          }, 
+          {
+            "amount": 0.7, 
+            "age": 468
+          }
+        ], 
+        "_body": "", 
+        "_head": "5c08103ac11cd4d0", 
+        "_date": ""
+      }
+    ], 
+    "programmed": 3.5, 
+    "_head": "01232300", 
+    "amount": 3.5, 
+    "duration": 0, 
+    "type": "normal", 
+    "_date": "74d3481310"
+  }, 
+  {
+    "_type": "BolusWizard", 
+    "bg": 336, 
+    "bg_target_high": 120, 
+    "correction_estimate": 0.8, 
+    "unknown_byte[10]": 0, 
+    "_description": "BolusWizard 2016-07-19T08:19:52 head[2], body[13] op[0x5b]", 
+    "timestamp": "2016-07-19T08:19:52", 
+    "_body": "0051091e5a4800000032001678", 
+    "carb_input": 0, 
+    "_head": "5b50", 
+    "unabsorbed_insulin_total": 5.0, 
+    "_byte[5]": 72, 
+    "unabsorbed_insulin_count": "??", 
+    "_byte[7]": 0, 
+    "_date": "74d3081310", 
+    "bolus_estimate": 2.2, 
+    "unknown_byte[8]": 0, 
+    "carb_ratio": 9, 
+    "food_estimate": 0.0, 
+    "bg_target_low": 90, 
+    "sensitivity": 30
+  }, 
+  {
+    "_type": "CalBGForPH", 
+    "_description": "CalBGForPH 2016-07-19T08:19:43 head[2], body[0] op[0x0a]", 
+    "timestamp": "2016-07-19T08:19:43", 
+    "_body": "", 
+    "_head": "0a50", 
+    "amount": 336, 
+    "_date": "6bd3281390"
+  }, 
+  {
+    "_type": "PumpResume", 
+    "_description": "PumpResume 2016-07-19T08:06:51 head[2], body[0] op[0x1f]", 
+    "timestamp": "2016-07-19T08:06:51", 
+    "_body": "", 
+    "_head": "1f00", 
+    "_date": "73c6081310"
+  }, 
+  {
+    "_type": "Prime", 
+    "type": "fixed", 
+    "_description": "Prime 2016-07-19T08:06:29 head[5], body[0] op[0x03]", 
+    "timestamp": "2016-07-19T08:06:29", 
+    "_body": "", 
+    "fixed": 3.2, 
+    "_head": "0300200006", 
+    "amount": 0.6, 
+    "_date": "5dc6081310"
+  }, 
+  {
+    "_type": "PumpSuspend", 
+    "_description": "PumpSuspend 2016-07-19T08:06:50 head[2], body[0] op[0x1e]", 
+    "timestamp": "2016-07-19T08:06:50", 
+    "_body": "", 
+    "_head": "1e00", 
+    "_date": "72c6081310"
+  }, 
+  {
+    "_type": "Prime", 
+    "type": "fixed", 
+    "_description": "Prime 2016-07-19T08:04:07 head[5], body[0] op[0x03]", 
+    "timestamp": "2016-07-19T08:04:07", 
+    "_body": "", 
+    "fixed": 3.2, 
+    "_head": "0300200020", 
+    "amount": 3.2, 
+    "_date": "47c4081310"
+  }, 
+  {
     "_type": "Bolus", 
     "_description": "Bolus 2016-07-19T07:24:24 head[4], body[0] op[0x01]", 
     "timestamp": "2016-07-19T07:24:24", 
