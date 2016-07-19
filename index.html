@@ -1,33 +1,12 @@
-Mon Jul 18 23:00:01 PDT 2016
-pump://JSON/read_settings/settings/settings.json
-reporting settings/settings.json
-pump://JSON/read_bg_targets/settings/bg_targets_raw.json
-reporting settings/bg_targets_raw.json
-pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
-reporting settings/insulin_sensitivities_raw.json
-pump://JSON/read_basal_profile_std/settings/basal_profile.json
-reporting settings/basal_profile.json
-get-profile://text/shell/settings/profile.json
-reporting settings/profile.json
-curl://text/shell/monitor/glucose.json
-reporting monitor/glucose.json
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
+Mon Jul 18 23:06:01 PDT 2016
 reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-{"delta":1,"glucose":118,"avgdelta":1}
-{"duration":26,"rate":1.3,"temp":"absolute"}
-{"netbasalinsulin":-0.1,"activity":0.0896,"basaliob":-0.528,"hightempinsulin":0.8,"bolussnooze":0.059,"iob":3.226}
+{"delta":2,"glucose":120,"avgdelta":1.667}
+{"duration":21,"rate":1.3,"temp":"absolute"}
+{"netbasalinsulin":0,"activity":0.0841,"basaliob":-0.539,"hightempinsulin":0.8,"bolussnooze":0.006,"iob":2.814}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.3,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":118,"tick":"+1","eventualBG":64,"snoozeBG":67,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 43 BGI: -13.44","reason":"Eventual BG 64<90, but Avg. Delta 1.00 > Exp. Delta -12.3, temp 1.3 ~ req 1.3U/hr"}
+{"temp":"absolute","bg":120,"tick":"+2","eventualBG":79,"snoozeBG":79,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 43 BGI: -12.61","reason":"Eventual BG 79<90, but Delta +2 > Exp. Delta -11.9, temp 1.3 ~ req 1.3U/hr"}
 No action required
 pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
@@ -45,4 +24,7 @@ ns://JSON/shell/nightscout/uploaded.json
 reporting nightscout/uploaded.json
 all done.
 (pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+mmtune:
+  "setFreq": 916.63,
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
