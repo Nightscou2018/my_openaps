@@ -1,17 +1,20 @@
-Wed Jul 20 08:42:01 PDT 2016
+Wed Jul 20 08:48:01 PDT 2016
+  "requested": {
+    "duration": 30,
+    "rate": 1.6,
     "temp": "absolute"
   },
-  "bg": 192,
+  "bg": 186,
   "temp": "absolute",
-  "snoozeBG": 153,
-  "timestamp": "2016-07-20T08:41:06.422109",
+  "snoozeBG": 160,
+  "timestamp": "2016-07-20T08:46:17.876998",
   "rate": 1.6,
-  "reason": "Eventual BG 151>=120, no temp, setting 2.52U/hr",
-  "eventualBG": 151,
+  "reason": "Eventual BG 160>90 but Avg. Delta -6.00 < Exp. Delta -5.7; setting current basal of 1.6 as temp. Setting neutral temp basal of 1.6U/hr",
+  "eventualBG": 160,
   "recieved": false,
   "duration": 0,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 1 BGI: -4.42",
-  "tick": -4
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 11 BGI: -4.19",
+  "tick": -6
 }pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
@@ -24,8 +27,39 @@ openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
 
 tz://JSON/rezone/monitor/pumphistory-zoned.json
 reporting monitor/pumphistory-zoned.json
-Nothing to upload.
 ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
+No JSON object could be decoded
+
+Traceback (most recent call last):
+  File "/usr/local/bin/openaps-report", line 4, in <module>
+    __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-report')
+  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
+    self.require(requires)[0].run_script(script_name, ns)
+  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
+    exec(code, namespace, namespace)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 82, in <module>
+    app( )
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/__init__.py", line 51, in __call__
+    self.run(self.args)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 75, in run
+    output = app(args, self)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/subcommand.py", line 52, in __call__
+    return self.method.main(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/invoke.py", line 48, in main
+    reporters.Reporter(report, device, task)(output)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/reporters/__init__.py", line 33, in __call__
+    self.blob = self.serialize(data)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/reporters/__init__.py", line 31, in serialize
+    return self.method.serialize(render(data), self)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/process.py", line 56, in prerender_json
+    return json.loads(data)
+  File "/usr/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+No recent treatments to upload
 all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
