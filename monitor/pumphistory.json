@@ -1,5 +1,17 @@
 [
   {
+    "programmed": 5.0, 
+    "_type": "Bolus", 
+    "type": "normal", 
+    "_description": "Bolus 2016-07-20T10:35:57 head[4], body[0] op[0x01]", 
+    "duration": 0, 
+    "timestamp": "2016-07-20T10:35:57", 
+    "_body": "", 
+    "_head": "01323200", 
+    "amount": 5.0, 
+    "_date": "79e34a1410"
+  }, 
+  {
     "_type": "PumpResume", 
     "_description": "PumpResume 2016-07-20T10:35:49 head[2], body[0] op[0x1f]", 
     "timestamp": "2016-07-20T10:35:49", 
