@@ -1,4 +1,4 @@
-Tue Jul 19 22:42:01 PDT 2016
+Tue Jul 19 22:48:01 PDT 2016
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -22,31 +22,26 @@ reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 {"delta":2,"glucose":142,"avgdelta":1}
-{"duration":0,"rate":2.25,"temp":"absolute"}
-{"netbasalinsulin":0,"activity":0.0457,"basaliob":0,"hightempinsulin":0,"bolussnooze":0,"iob":0.89}
+{"duration":27,"rate":3.525,"temp":"absolute"}
+{"netbasalinsulin":0.15,"activity":0.041,"basaliob":0.15,"hightempinsulin":0.15,"bolussnooze":0,"iob":0.869}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.3,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":142,"tick":"+2","eventualBG":139,"snoozeBG":139,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 24 BGI: -6.85","reason":"Eventual BG 139>=120, no temp, setting 3.567U/hr","duration":30,"rate":3.55}
-pump://JSON/set_temp_basal/enact/enacted.json
-reporting enact/enacted.json
-{
-  "bg": 142,
-  "temp": "absolute",
-  "snoozeBG": 139,
-  "recieved": true,
-  "rate": 3.525,
-  "reason": "Eventual BG 139>=120, no temp, setting 3.567U/hr",
-  "eventualBG": 139,
-  "timestamp": "2016-07-19T22:41:53.389246",
-  "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 24 BGI: -6.85",
-  "tick": "+2"
-}pump://JSON/read_battery_status/monitor/battery.json
+{"temp":"absolute","bg":142,"tick":"+2","eventualBG":137,"snoozeBG":137,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 21 BGI: -6.15","reason":"Eventual BG 137>=120, temp 3.525 >~ req 3.433U/hr"}
+No action required
+pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
 reporting monitor/reservoir.json
 pump://JSON/read_status/monitor/status.json
 reporting monitor/status.json
 sleeping
+[Errno 2] No such file or directory
+openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
+
+tz://JSON/rezone/monitor/pumphistory-zoned.json
+reporting monitor/pumphistory-zoned.json
+ns://JSON/shell/nightscout/uploaded.json
+reporting nightscout/uploaded.json
+all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
