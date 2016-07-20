@@ -1,18 +1,4 @@
-Wed Jul 20 09:00:01 PDT 2016
-    "temp": "absolute"
-  },
-  "bg": 171,
-  "temp": "absolute",
-  "snoozeBG": 122,
-  "timestamp": "2016-07-20T08:56:17.094236",
-  "rate": 1.6,
-  "reason": "Eventual BG 122>90 but Avg. Delta -9.00 < Exp. Delta -4.2; setting current basal of 1.6 as temp. Setting neutral temp basal of 1.6U/hr",
-  "eventualBG": 122,
-  "recieved": false,
-  "duration": 0,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -19 BGI: -3.75",
-  "tick": -9
-}pump://JSON/read_battery_status/monitor/battery.json
+Wed Jul 20 09:06:01 PDT 2016
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
 reporting monitor/reservoir.json
@@ -60,4 +46,7 @@ ValueError: No JSON object could be decoded
 No recent treatments to upload
 all done.
 (pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+mmtune:
+  "setFreq": 916.612,
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
