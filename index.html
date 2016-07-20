@@ -1,34 +1,10 @@
-Wed Jul 20 09:12:01 PDT 2016
-    "duration": 30,
-    "rate": 2.25,
-    "temp": "absolute"
-  },
-  "bg": 162,
-  "temp": "absolute",
-  "snoozeBG": 142,
-  "timestamp": "2016-07-20T09:11:10.285449",
-  "rate": 1.6,
-  "reason": "Eventual BG 142>=120, no temp, setting 2.26U/hr",
-  "eventualBG": 142,
-  "recieved": false,
-  "duration": 0,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 0 BGI: -3.09",
-  "tick": -3
-}pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-ns://JSON/shell/nightscout/uploaded.json
-No JSON object could be decoded
-
+Wed Jul 20 09:18:01 PDT 2016
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT OK
+settings/settings.json  raised
+pump://JSON/read_settings/settings/settings.json
 Traceback (most recent call last):
   File "/usr/local/bin/openaps-report", line 4, in <module>
     __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-report')
@@ -44,21 +20,21 @@ Traceback (most recent call last):
     output = app(args, self)
   File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/subcommand.py", line 52, in __call__
     return self.method.main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/invoke.py", line 48, in main
-    reporters.Reporter(report, device, task)(output)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/reporters/__init__.py", line 33, in __call__
-    self.blob = self.serialize(data)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/reporters/__init__.py", line 31, in serialize
-    return self.method.serialize(render(data), self)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/process.py", line 56, in prerender_json
-    return json.loads(data)
-  File "/usr/lib/python2.7/json/__init__.py", line 338, in loads
-    return _default_decoder.decode(s)
-  File "/usr/lib/python2.7/json/decoder.py", line 366, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/usr/lib/python2.7/json/decoder.py", line 384, in raw_decode
-    raise ValueError("No JSON object could be decoded")
-ValueError: No JSON object could be decoded
-No recent treatments to upload
-all done.
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/invoke.py", line 40, in main
+    output = task.method(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 45, in __call__
+    output = self.main(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 333, in main
+    return getattr(self.pump.model, name)(**self.get_params(args))
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
+    self.validate( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 18, in validate
+    self.response.check_output(data)
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 126, in check_output
+    return self.checker(data)
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 78, in __call__
+    self.check_fields(data)
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 75, in check_fields
+    raise BadResponse( )
+decocare.commands.BadResponse
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
