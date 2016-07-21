@@ -1,4 +1,4 @@
-Thu Jul 21 16:12:01 PDT 2016
+Thu Jul 21 16:18:01 PDT 2016
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -21,13 +21,10 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":1,"glucose":173,"avgdelta":-1}
-{"duration":26,"rate":1.175,"temp":"absolute"}
-{"netbasalinsulin":0.75,"activity":0.0417,"basaliob":0.794,"hightempinsulin":0.95,"bolussnooze":2.852,"iob":4.837}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
+BG data is too old, or clock set incorrectly Thu Jul 21 2016 16:06:01 GMT-0700 (PDT) vs Thu Jul 21 2016 16:16:01 GMT-0700 (PDT)
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":173,"tick":"+1","eventualBG":44,"snoozeBG":172,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 16 BGI: -6.26","reason":"Eventual BG 44<90, bolus snooze: eventual BG range 44-172, temp 1.175 ~ req 1.2U/hr"}
+[{"msg":"BG data is too old, or clock set incorrectly Thu Jul 21 2016 16:06:01 GMT-0700 (PDT) vs Thu Jul 21 2016 16:16:01 GMT-0700 (PDT)"}]
 No action required
 pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
@@ -41,7 +38,6 @@ openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
 
 tz://JSON/rezone/monitor/pumphistory-zoned.json
 reporting monitor/pumphistory-zoned.json
-Nothing to upload.
 ns://JSON/shell/nightscout/uploaded.json
 reporting nightscout/uploaded.json
 all done.
