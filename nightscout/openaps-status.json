@@ -16,38 +16,38 @@
   }, 
   "openaps": {
     "suggested": {
-      "bg": 135, 
+      "bg": 136, 
       "temp": "absolute", 
-      "snoozeBG": 119, 
-      "timestamp": "2016-07-21T19:20:54.000Z", 
-      "rate": 0.8, 
-      "reason": "119-119 in range: no temp required; setting current basal of 0.8 as temp. Setting neutral temp basal of 0.8U/hr", 
-      "eventualBG": 119, 
+      "snoozeBG": 123, 
+      "timestamp": "2016-07-21T19:30:54.000Z", 
+      "rate": 2, 
+      "reason": "Eventual BG 123>=120, temp 0.8<2U/hr", 
+      "eventualBG": 123, 
       "duration": 30, 
-      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 4 BGI: -1.31", 
-      "tick": "+0"
+      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 5 BGI: -1.23", 
+      "tick": "+1"
     }, 
     "iob": {
       "netbasalinsulin": 1.45, 
-      "timestamp": "2016-07-21T19:20:47.000Z", 
-      "activity": 0.0087, 
-      "basaliob": 0.667, 
+      "timestamp": "2016-07-21T19:30:47.000Z", 
+      "activity": 0.0082, 
+      "basaliob": 0.584, 
       "hightempinsulin": 1.45, 
       "bolussnooze": 0, 
-      "iob": 0.667
+      "iob": 0.584
     }, 
     "enacted": {
-      "bg": 135, 
+      "bg": 136, 
       "temp": "absolute", 
-      "snoozeBG": 119, 
+      "snoozeBG": 123, 
       "recieved": true, 
-      "reason": "119-119 in range: no temp required; setting current basal of 0.8 as temp. Setting neutral temp basal of 0.8U/hr", 
-      "rate": 0.8, 
-      "eventualBG": 119, 
-      "timestamp": "2016-07-21T19:20:59.000Z", 
+      "reason": "Eventual BG 123>=120, temp 0.8<2U/hr", 
+      "rate": 2, 
+      "eventualBG": 123, 
+      "timestamp": "2016-07-21T19:30:59.000Z", 
       "duration": 30, 
-      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 4 BGI: -1.31", 
-      "tick": "+0"
+      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 5 BGI: -1.23", 
+      "tick": "+1"
     }
   }
 }
