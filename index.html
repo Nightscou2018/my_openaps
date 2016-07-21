@@ -1,4 +1,4 @@
-Thu Jul 21 03:24:01 PDT 2016
+Thu Jul 21 03:30:01 PDT 2016
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -21,13 +21,13 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":-2,"glucose":192,"avgdelta":-2}
-{"duration":16,"rate":2.45,"temp":"absolute"}
-{"netbasalinsulin":3.55,"activity":0.0286,"basaliob":2.293,"hightempinsulin":3.65,"bolussnooze":0,"iob":2.306}
+{"delta":-2,"glucose":190,"avgdelta":-2}
+{"duration":11,"rate":2.45,"temp":"absolute"}
+{"netbasalinsulin":3.5,"activity":0.0279,"basaliob":2.261,"hightempinsulin":3.6,"bolussnooze":0,"iob":2.263}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.25,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":192,"tick":-2,"eventualBG":130,"snoozeBG":130,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 7 BGI: -4.29","reason":"Eventual BG 130>=120, temp 2.45 >~ req 2.25U/hr"}
+{"temp":"absolute","bg":190,"tick":-2,"eventualBG":129,"snoozeBG":129,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 7 BGI: -4.19","reason":"Eventual BG 129>=120, temp 2.45 >~ req 2.19U/hr"}
 No action required
 pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
@@ -46,3 +46,4 @@ ns://JSON/shell/nightscout/uploaded.json
 reporting nightscout/uploaded.json
 all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
