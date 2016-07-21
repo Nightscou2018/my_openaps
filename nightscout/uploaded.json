@@ -51,21 +51,6 @@
     "absolute": 1.1
   }, 
   {
-    "_type": "CalBGForPH", 
-    "_description": "CalBGForPH 2016-07-21T00:18:06 head[2], body[0] op[0x0a]", 
-    "timestamp": "2016-07-21T00:18:06-07:00", 
-    "_body": "", 
-    "glucoseType": "Finger", 
-    "_head": "0ad2", 
-    "enteredBy": "openaps://medtronic/722", 
-    "amount": 210, 
-    "_date": "46d2201510", 
-    "eventType": "BG Check", 
-    "created_at": "2016-07-21T00:18:06-07:00", 
-    "medtronic": "mm://openaps/mm-format-ns-treatments/CalBGForPH", 
-    "glucose": 210
-  }, 
-  {
     "bg": "210", 
     "ratio": "9", 
     "bolus": {
@@ -135,6 +120,21 @@
     "duration": 0, 
     "notes": "Normal bolus with wizard.\nProgrammed bolus 0.7\nDelivered bolus 0.7\nPercent delivered:  100%\nFood estimate 0\nCorrection estimate 1.4\nBolus estimate 0.7\nTarget low 90\nTarget high 120\nHypothetical glucose delta -21\nGlucose was: 210", 
     "medtronic": "mm://openaps/mm-format-ns-treatments/Correction Bolus", 
+    "glucose": 210
+  }, 
+  {
+    "_type": "CalBGForPH", 
+    "_description": "CalBGForPH 2016-07-21T00:18:06 head[2], body[0] op[0x0a]", 
+    "timestamp": "2016-07-21T00:18:06-07:00", 
+    "_body": "", 
+    "glucoseType": "Finger", 
+    "_head": "0ad2", 
+    "enteredBy": "openaps://medtronic/722", 
+    "amount": 210, 
+    "_date": "46d2201510", 
+    "eventType": "BG Check", 
+    "created_at": "2016-07-21T00:18:06-07:00", 
+    "medtronic": "mm://openaps/mm-format-ns-treatments/CalBGForPH", 
     "glucose": 210
   }
 ]
