@@ -7,7 +7,7 @@
   "bg": 88, 
   "temp": "absolute", 
   "snoozeBG": 82, 
-  "timestamp": "2016-07-21T08:06:14.858753", 
+  "timestamp": "2016-07-21T08:11:11.428957", 
   "rate": 1.6, 
   "reason": "Eventual BG 82<90, setting -1.467U/hr", 
   "eventualBG": 82, 
