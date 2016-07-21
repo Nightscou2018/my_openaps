@@ -1,5 +1,39 @@
-Thu Jul 21 11:36:02 PDT 2016
-pump://JSON/read_battery_status/monitor/battery.json
+Thu Jul 21 11:42:01 PDT 2016
+curl://text/shell/monitor/glucose.json
+reporting monitor/glucose.json
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+pump://JSON/read_temp_basal/monitor/temp_basal.json
+reporting monitor/temp_basal.json
+pump://JSON/iter_pump_hours/monitor/pumphistory.json
+reporting monitor/pumphistory.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+{"delta":-3,"glucose":132,"avgdelta":-0.333}
+{"duration":6,"rate":0.8,"temp":"absolute"}
+{"netbasalinsulin":1.3,"activity":0.0103,"basaliob":0.655,"hightempinsulin":1.3,"bolussnooze":0,"iob":0.655}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":0.8,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
+Setting neutral temp basal of 0.8U/hr
+determine-basal://text/shell/enact/suggested.json
+reporting enact/suggested.json
+{"temp":"absolute","bg":132,"tick":-3,"eventualBG":119,"snoozeBG":119,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 7 BGI: -1.54","reason":"Eventual BG 119>90 but Avg. Delta -3.00 < Exp. Delta -1.9; setting current basal of 0.8 as temp. Setting neutral temp basal of 0.8U/hr","duration":30,"rate":0.8}
+pump://JSON/set_temp_basal/enact/enacted.json
+reporting enact/enacted.json
+{
+  "bg": 132,
+  "temp": "absolute",
+  "snoozeBG": 119,
+  "recieved": true,
+  "rate": 0.8,
+  "reason": "Eventual BG 119>90 but Avg. Delta -3.00 < Exp. Delta -1.9; setting current basal of 0.8 as temp. Setting neutral temp basal of 0.8U/hr",
+  "eventualBG": 119,
+  "timestamp": "2016-07-21T11:41:03.369158",
+  "duration": 30,
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 7 BGI: -1.54",
+  "tick": -3
+}pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
 reporting monitor/reservoir.json
@@ -15,8 +49,4 @@ Nothing to upload.
 ns://JSON/shell/nightscout/uploaded.json
 reporting nightscout/uploaded.json
 all done.
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
-pump://JSON/read_clock/monitor/clock.json
-mmtune:
-  "setFreq": 916.684,
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
