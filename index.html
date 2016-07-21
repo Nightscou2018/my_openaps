@@ -1,18 +1,39 @@
-Thu Jul 21 12:18:01 PDT 2016
+Thu Jul 21 12:24:01 PDT 2016
+reporting settings/profile.json
+curl://text/shell/monitor/glucose.json
+reporting monitor/glucose.json
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+pump://JSON/read_temp_basal/monitor/temp_basal.json
+reporting monitor/temp_basal.json
+pump://JSON/iter_pump_hours/monitor/pumphistory.json
+reporting monitor/pumphistory.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+{"delta":0,"glucose":135,"avgdelta":1}
+{"duration":26,"rate":2.025,"temp":"absolute"}
+{"netbasalinsulin":1.45,"activity":0.0087,"basaliob":0.667,"hightempinsulin":1.45,"bolussnooze":0,"iob":0.667}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":0.8,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
+Setting neutral temp basal of 0.8U/hr
+determine-basal://text/shell/enact/suggested.json
+reporting enact/suggested.json
+{"temp":"absolute","bg":135,"tick":"+0","eventualBG":119,"snoozeBG":119,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 4 BGI: -1.31","reason":"119-119 in range: no temp required; setting current basal of 0.8 as temp. Setting neutral temp basal of 0.8U/hr","duration":30,"rate":0.8}
 pump://JSON/set_temp_basal/enact/enacted.json
 reporting enact/enacted.json
 {
   "bg": 135,
   "temp": "absolute",
-  "snoozeBG": 124,
+  "snoozeBG": 119,
   "recieved": true,
-  "rate": 2.025,
-  "reason": "Eventual BG 124>=120, temp 1.95<2.067U/hr",
-  "eventualBG": 124,
-  "timestamp": "2016-07-21T12:16:09.013246",
+  "rate": 0.8,
+  "reason": "119-119 in range: no temp required; setting current basal of 0.8 as temp. Setting neutral temp basal of 0.8U/hr",
+  "eventualBG": 119,
+  "timestamp": "2016-07-21T12:20:59.699888",
   "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 7 BGI: -1.35",
-  "tick": "+1"
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 4 BGI: -1.31",
+  "tick": "+0"
 }pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
@@ -25,39 +46,8 @@ openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
 
 tz://JSON/rezone/monitor/pumphistory-zoned.json
 reporting monitor/pumphistory-zoned.json
+Nothing to upload.
 ns://JSON/shell/nightscout/uploaded.json
-No JSON object could be decoded
-
-Traceback (most recent call last):
-  File "/usr/local/bin/openaps-report", line 4, in <module>
-    __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-report')
-  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
-    self.require(requires)[0].run_script(script_name, ns)
-  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
-    exec(code, namespace, namespace)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 82, in <module>
-    app( )
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/__init__.py", line 51, in __call__
-    self.run(self.args)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 75, in run
-    output = app(args, self)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/subcommand.py", line 52, in __call__
-    return self.method.main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/invoke.py", line 48, in main
-    reporters.Reporter(report, device, task)(output)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/reporters/__init__.py", line 33, in __call__
-    self.blob = self.serialize(data)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/reporters/__init__.py", line 31, in serialize
-    return self.method.serialize(render(data), self)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/process.py", line 56, in prerender_json
-    return json.loads(data)
-  File "/usr/lib/python2.7/json/__init__.py", line 338, in loads
-    return _default_decoder.decode(s)
-  File "/usr/lib/python2.7/json/decoder.py", line 366, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/usr/lib/python2.7/json/decoder.py", line 384, in raw_decode
-    raise ValueError("No JSON object could be decoded")
-ValueError: No JSON object could be decoded
-No recent treatments to upload
+reporting nightscout/uploaded.json
 all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
