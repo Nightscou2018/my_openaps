@@ -1,4 +1,7 @@
-Thu Jul 21 02:30:01 PDT 2016
+Thu Jul 21 02:36:01 PDT 2016
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT OK
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -21,29 +24,8 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":0,"glucose":212,"avgdelta":0}
-{"duration":26,"rate":3.75,"temp":"absolute"}
-{"netbasalinsulin":3.7,"activity":0.0427,"basaliob":2.14,"hightempinsulin":3.7,"bolussnooze":0,"iob":2.899}
+{"delta":-1,"glucose":209,"avgdelta":-1}
+{"duration":26,"rate":2.6,"temp":"absolute"}
+{"netbasalinsulin":4.05,"activity":0.0405,"basaliob":2.321,"hightempinsulin":4.05,"bolussnooze":0,"iob":2.858}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.1,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-{"temp":"absolute","bg":212,"tick":"+0","eventualBG":144,"snoozeBG":144,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 19 BGI: -6.41","reason":"Eventual BG 144>=120, temp 3.75 >~ req 3.7U/hr"}
-No action required
-pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-Nothing to upload.
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
