@@ -1,53 +1,14 @@
-Thu Jul 21 12:24:01 PDT 2016
-reporting settings/profile.json
-curl://text/shell/monitor/glucose.json
-reporting monitor/glucose.json
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-{"delta":0,"glucose":135,"avgdelta":1}
-{"duration":26,"rate":2.025,"temp":"absolute"}
-{"netbasalinsulin":1.45,"activity":0.0087,"basaliob":0.667,"hightempinsulin":1.45,"bolussnooze":0,"iob":0.667}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":0.8,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
-Setting neutral temp basal of 0.8U/hr
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-{"temp":"absolute","bg":135,"tick":"+0","eventualBG":119,"snoozeBG":119,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 4 BGI: -1.31","reason":"119-119 in range: no temp required; setting current basal of 0.8 as temp. Setting neutral temp basal of 0.8U/hr","duration":30,"rate":0.8}
-pump://JSON/set_temp_basal/enact/enacted.json
-reporting enact/enacted.json
-{
-  "bg": 135,
-  "temp": "absolute",
-  "snoozeBG": 119,
-  "recieved": true,
-  "rate": 0.8,
-  "reason": "119-119 in range: no temp required; setting current basal of 0.8 as temp. Setting neutral temp basal of 0.8U/hr",
-  "eventualBG": 119,
-  "timestamp": "2016-07-21T12:20:59.699888",
-  "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 4 BGI: -1.31",
-  "tick": "+0"
-}pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-Nothing to upload.
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
+Thu Jul 21 12:30:01 PDT 2016
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 67, in __call__
+    for record in page:
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 46, in download_page
+    for record in self.find_records(page):
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 157, in find_records
+    decoder = history.HistoryPage(response.data, self.inst)
+  File "/usr/local/lib/python2.7/dist-packages/decocare/history.py", line 777, in __init__
+    if lib.BangInt(crc) != computed:
+  File "/usr/local/lib/python2.7/dist-packages/decocare/lib.py", line 235, in BangInt
+    ( x, y ) = ints
+ValueError: need more than 0 values to unpack
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
