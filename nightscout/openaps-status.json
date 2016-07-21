@@ -7,46 +7,46 @@
     }, 
     "status": {
       "status": "normal", 
-      "timestamp": "2016-07-21T10:51:07.000Z", 
+      "timestamp": "2016-07-21T10:56:11.000Z", 
       "bolusing": false, 
       "suspended": false
     }, 
-    "reservoir": 223.9, 
+    "reservoir": 223.7, 
     "clock": "2016-06-30T22:50:55-07:00"
   }, 
   "openaps": {
     "suggested": {
-      "bg": 178, 
+      "bg": 176, 
       "temp": "absolute", 
       "snoozeBG": 126, 
-      "timestamp": "2016-07-21T10:50:56.000Z", 
-      "rate": 1.95, 
-      "reason": "Eventual BG 126>=120, temp 1.85<1.97U/hr", 
+      "timestamp": "2016-07-21T10:56:01.000Z", 
+      "rate": 2.05, 
+      "reason": "Eventual BG 126>=120, temp 1.95<2.07U/hr", 
       "eventualBG": 126, 
       "duration": 30, 
-      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 6 BGI: -4.19", 
+      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 7 BGI: -4.19", 
       "tick": -2
     }, 
     "iob": {
-      "netbasalinsulin": 3.9, 
-      "timestamp": "2016-07-21T10:50:49.000Z", 
+      "netbasalinsulin": 4.05, 
+      "timestamp": "2016-07-21T10:55:54.000Z", 
       "activity": 0.0279, 
-      "basaliob": 1.926, 
-      "hightempinsulin": 3.95, 
+      "basaliob": 1.885, 
+      "hightempinsulin": 4.05, 
       "bolussnooze": 0, 
-      "iob": 1.926
+      "iob": 1.885
     }, 
     "enacted": {
-      "bg": 178, 
+      "bg": 176, 
       "temp": "absolute", 
       "snoozeBG": 126, 
       "recieved": true, 
-      "reason": "Eventual BG 126>=120, temp 1.85<1.97U/hr", 
-      "rate": 1.95, 
+      "reason": "Eventual BG 126>=120, temp 1.95<2.07U/hr", 
+      "rate": 2.025, 
       "eventualBG": 126, 
-      "timestamp": "2016-07-21T10:51:02.000Z", 
+      "timestamp": "2016-07-21T10:56:06.000Z", 
       "duration": 30, 
-      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 6 BGI: -4.19", 
+      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 7 BGI: -4.19", 
       "tick": -2
     }
   }
