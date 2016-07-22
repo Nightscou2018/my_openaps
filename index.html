@@ -1,54 +1,14 @@
-Fri Jul 22 15:54:01 PDT 2016
-get-profile://text/shell/settings/profile.json
-reporting settings/profile.json
-curl://text/shell/monitor/glucose.json
-reporting monitor/glucose.json
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-{"delta":-1,"glucose":144,"avgdelta":-0.667}
-{"duration":6,"rate":1.175,"temp":"absolute"}
-{"netbasalinsulin":1,"activity":0.0073,"basaliob":1.194,"hightempinsulin":1.55,"bolussnooze":0,"iob":1.194}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
-Setting neutral temp basal of 1.2U/hr
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-{"temp":"absolute","bg":144,"tick":-1,"eventualBG":108,"snoozeBG":108,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 0 BGI: -1.09","reason":"108-108 in range: no temp required; setting current basal of 1.2 as temp. Setting neutral temp basal of 1.2U/hr","duration":30,"rate":1.2}
-pump://JSON/set_temp_basal/enact/enacted.json
-reporting enact/enacted.json
-{
-  "bg": 144,
-  "temp": "absolute",
-  "snoozeBG": 108,
-  "recieved": true,
-  "rate": 1.175,
-  "reason": "108-108 in range: no temp required; setting current basal of 1.2 as temp. Setting neutral temp basal of 1.2U/hr",
-  "eventualBG": 108,
-  "timestamp": "2016-07-22T15:51:02.989922",
-  "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 0 BGI: -1.09",
-  "tick": -1
-}pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-Nothing to upload.
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
+Fri Jul 22 16:00:01 PDT 2016
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 45, in __call__
+    output = self.main(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 338, in main
+    return getattr(self.pump.model, name)(**self.get_params(args))
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
+    self.validate( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 17, in validate
+    data = self.response.getData( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 1051, in getData
+    units = self.data[0]
+IndexError: bytearray index out of range
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
