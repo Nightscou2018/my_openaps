@@ -1,14 +1,29 @@
-Fri Jul 22 16:00:01 PDT 2016
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 45, in __call__
-    output = self.main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 338, in main
-    return getattr(self.pump.model, name)(**self.get_params(args))
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
-    self.validate( )
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 17, in validate
-    data = self.response.getData( )
-  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 1051, in getData
-    units = self.data[0]
-IndexError: bytearray index out of range
-(pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
+Fri Jul 22 16:06:01 PDT 2016
+all done.
 (pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT OK
+pump://JSON/read_settings/settings/settings.json
+reporting settings/settings.json
+pump://JSON/read_bg_targets/settings/bg_targets_raw.json
+reporting settings/bg_targets_raw.json
+pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
+reporting settings/insulin_sensitivities_raw.json
+pump://JSON/read_basal_profile_std/settings/basal_profile.json
+reporting settings/basal_profile.json
+get-profile://text/shell/settings/profile.json
+reporting settings/profile.json
+curl://text/shell/monitor/glucose.json
+reporting monitor/glucose.json
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+pump://JSON/read_temp_basal/monitor/temp_basal.json
+reporting monitor/temp_basal.json
+pump://JSON/iter_pump_hours/monitor/pumphistory.json
+reporting monitor/pumphistory.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+(pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
