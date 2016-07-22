@@ -1,5 +1,17 @@
 [
   {
+    "_type": "Bolus", 
+    "_description": "Bolus 2016-07-21T19:46:11 head[4], body[0] op[0x01]", 
+    "timestamp": "2016-07-21T19:46:11-07:00", 
+    "_body": "", 
+    "programmed": 4.0, 
+    "_head": "01282800", 
+    "amount": 4.0, 
+    "duration": 0, 
+    "type": "normal", 
+    "_date": "4bee531510"
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "_description": "TempBasalDuration 2016-07-21T19:31:43 head[2], body[0] op[0x16]", 
     "timestamp": "2016-07-21T19:31:43-07:00", 
@@ -288,17 +300,5 @@
     "_head": "332f", 
     "rate": 1.175, 
     "_date": "6fee0f5510"
-  }, 
-  {
-    "_type": "Bolus", 
-    "_description": "Bolus 2016-07-21T15:41:26 head[4], body[0] op[0x01]", 
-    "timestamp": "2016-07-21T15:41:26-07:00", 
-    "_body": "", 
-    "programmed": 4.0, 
-    "_head": "01282800", 
-    "amount": 4.0, 
-    "duration": 0, 
-    "type": "normal", 
-    "_date": "5ae94f1510"
   }
 ]
