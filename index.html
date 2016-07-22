@@ -1,22 +1,13 @@
-Thu Jul 21 23:54:01 PDT 2016
+Fri Jul 22 00:00:01 PDT 2016
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT WITH MMTUNE OK
+settings/insulin_sensitivities_raw.json  raised  bytearray index out of range
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
 reporting settings/bg_targets_raw.json
 pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
-reporting settings/insulin_sensitivities_raw.json
-pump://JSON/read_basal_profile_std/settings/basal_profile.json
-reporting settings/basal_profile.json
-get-profile://text/shell/settings/profile.json
-reporting settings/profile.json
-curl://text/shell/monitor/glucose.json
-reporting monitor/glucose.json
-monitor/pumphistory.json  raised  need more than 0 values to unpack
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
 Traceback (most recent call last):
   File "/usr/local/bin/openaps-report", line 4, in <module>
     __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-report')
@@ -36,17 +27,14 @@ Traceback (most recent call last):
     output = task.method(args, app)
   File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 45, in __call__
     output = self.main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 639, in main
-    for rec in self.range( ):
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 67, in __call__
-    for record in page:
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 46, in download_page
-    for record in self.find_records(page):
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 157, in find_records
-    decoder = history.HistoryPage(response.data, self.inst)
-  File "/usr/local/lib/python2.7/dist-packages/decocare/history.py", line 777, in __init__
-    if lib.BangInt(crc) != computed:
-  File "/usr/local/lib/python2.7/dist-packages/decocare/lib.py", line 235, in BangInt
-    ( x, y ) = ints
-ValueError: need more than 0 values to unpack
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 333, in main
+    return getattr(self.pump.model, name)(**self.get_params(args))
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
+    self.validate( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 17, in validate
+    data = self.response.getData( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 1028, in getData
+    isFast = self.data[0] is 1
+IndexError: bytearray index out of range
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
