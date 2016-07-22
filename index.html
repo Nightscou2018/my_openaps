@@ -1,15 +1,7 @@
-Fri Jul 22 10:18:01 PDT 2016
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 333, in main
-    return getattr(self.pump.model, name)(**self.get_params(args))
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
-    self.validate( )
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 18, in validate
-    self.response.check_output(data)
-  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 126, in check_output
-    return self.checker(data)
-  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 78, in __call__
-    self.check_fields(data)
-  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 75, in check_fields
-    raise BadResponse( )
-decocare.commands.BadResponse
+Fri Jul 22 10:24:01 PDT 2016
+pump://JSON/read_clock/monitor/clock.json
+mmtune:
+  "setFreq": 916.63,
+pump://JSON/read_clock/monitor/clock.json
+PREFLIGHT FAILED
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
