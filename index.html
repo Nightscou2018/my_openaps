@@ -1,4 +1,7 @@
-Fri Jul 22 07:30:01 PDT 2016
+Fri Jul 22 07:36:01 PDT 2016
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT OK
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -21,26 +24,12 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-BG data is too old, or clock set incorrectly Fri Jul 22 2016 01:06:00 GMT-0700 (PDT) vs Fri Jul 22 2016 07:26:02 GMT-0700 (PDT)
+{"delta":2,"glucose":110,"avgdelta":-6}
+{"duration":26,"rate":0,"temp":"absolute"}
+{"netbasalinsulin":-0.15,"activity":-0.0001,"basaliob":-0.15,"hightempinsulin":0,"bolussnooze":0,"iob":-0.15}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.6,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-[{"msg":"BG data is too old, or clock set incorrectly Fri Jul 22 2016 01:06:00 GMT-0700 (PDT) vs Fri Jul 22 2016 07:26:02 GMT-0700 (PDT)"}]
+{"temp":"absolute","bg":110,"tick":"+2","eventualBG":79,"snoozeBG":79,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -36 BGI: 0.02","reason":"Eventual BG 79<90, setting -1.867U/hr, but 26m left and 0 ~ req 0U/hr: no action required"}
 No action required
-pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-Nothing to upload.
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
