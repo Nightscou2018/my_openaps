@@ -1,17 +1,8 @@
-Fri Jul 22 14:30:01 PDT 2016
-    output = self.main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 639, in main
-    for rec in self.range( ):
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 67, in __call__
-    for record in page:
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 46, in download_page
-    for record in self.find_records(page):
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 157, in find_records
-    decoder = history.HistoryPage(response.data, self.inst)
-  File "/usr/local/lib/python2.7/dist-packages/decocare/history.py", line 777, in __init__
-    if lib.BangInt(crc) != computed:
-  File "/usr/local/lib/python2.7/dist-packages/decocare/lib.py", line 235, in BangInt
-    ( x, y ) = ints
-ValueError: need more than 0 values to unpack
+Fri Jul 22 14:36:02 PDT 2016
+pump://JSON/read_clock/monitor/clock.json
+PREFLIGHT FAILED
 (pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+mmtune:
+  "setFreq": 916.63,
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
