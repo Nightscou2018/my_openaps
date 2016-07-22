@@ -1,13 +1,19 @@
-Fri Jul 22 15:06:01 PDT 2016
+Fri Jul 22 15:12:01 PDT 2016
+    return getattr(self.pump.model, name)(**self.get_params(args))
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
+    self.validate( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 17, in validate
+    data = self.response.getData( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 1028, in getData
+    isFast = self.data[0] is 1
+IndexError: bytearray index out of range
+(pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 pump://JSON/read_clock/monitor/clock.json
 reporting monitor/clock.json
 PREFLIGHT OK
-settings/insulin_sensitivities_raw.json  raised  bytearray index out of range
+settings/settings.json  raised
 pump://JSON/read_settings/settings/settings.json
-reporting settings/settings.json
-pump://JSON/read_bg_targets/settings/bg_targets_raw.json
-reporting settings/bg_targets_raw.json
-pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
 Traceback (most recent call last):
   File "/usr/local/bin/openaps-report", line 4, in <module>
     __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-report')
@@ -31,9 +37,13 @@ Traceback (most recent call last):
     return getattr(self.pump.model, name)(**self.get_params(args))
   File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
     self.validate( )
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 17, in validate
-    data = self.response.getData( )
-  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 1028, in getData
-    isFast = self.data[0] is 1
-IndexError: bytearray index out of range
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 18, in validate
+    self.response.check_output(data)
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 126, in check_output
+    return self.checker(data)
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 78, in __call__
+    self.check_fields(data)
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 75, in check_fields
+    raise BadResponse( )
+decocare.commands.BadResponse
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
