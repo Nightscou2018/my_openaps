@@ -1,4 +1,7 @@
-Thu Jul 21 20:00:01 PDT 2016
+Thu Jul 21 20:06:01 PDT 2016
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT OK
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -11,43 +14,20 @@ get-profile://text/shell/settings/profile.json
 reporting settings/profile.json
 curl://text/shell/monitor/glucose.json
 reporting monitor/glucose.json
-monitor/pumphistory.json  raised  need more than 0 values to unpack
 pump://JSON/read_clock/monitor/clock.json
 reporting monitor/clock.json
 pump://JSON/read_temp_basal/monitor/temp_basal.json
 reporting monitor/temp_basal.json
 pump://JSON/iter_pump_hours/monitor/pumphistory.json
-Traceback (most recent call last):
-  File "/usr/local/bin/openaps-report", line 4, in <module>
-    __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-report')
-  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
-    self.require(requires)[0].run_script(script_name, ns)
-  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
-    exec(code, namespace, namespace)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 82, in <module>
-    app( )
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/__init__.py", line 51, in __call__
-    self.run(self.args)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 75, in run
-    output = app(args, self)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/subcommand.py", line 52, in __call__
-    return self.method.main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/invoke.py", line 40, in main
-    output = task.method(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 45, in __call__
-    output = self.main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 639, in main
-    for rec in self.range( ):
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 67, in __call__
-    for record in page:
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 46, in download_page
-    for record in self.find_records(page):
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 157, in find_records
-    decoder = history.HistoryPage(response.data, self.inst)
-  File "/usr/local/lib/python2.7/dist-packages/decocare/history.py", line 777, in __init__
-    if lib.BangInt(crc) != computed:
-  File "/usr/local/lib/python2.7/dist-packages/decocare/lib.py", line 235, in BangInt
-    ( x, y ) = ints
-ValueError: need more than 0 values to unpack
+reporting monitor/pumphistory.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+{"delta":-2,"glucose":172,"avgdelta":3.333}
+{"duration":26,"rate":1.175,"temp":"absolute"}
+{"netbasalinsulin":0.75,"activity":0.0448,"basaliob":0.778,"hightempinsulin":1.15,"bolussnooze":4.78,"iob":7.838}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+determine-basal://text/shell/enact/suggested.json
+reporting enact/suggested.json
