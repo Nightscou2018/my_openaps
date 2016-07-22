@@ -1,7 +1,4 @@
-Fri Jul 22 07:36:01 PDT 2016
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-PREFLIGHT OK
+Fri Jul 22 07:42:01 PDT 2016
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -14,22 +11,42 @@ get-profile://text/shell/settings/profile.json
 reporting settings/profile.json
 curl://text/shell/monitor/glucose.json
 reporting monitor/glucose.json
+monitor/pumphistory.json  raised  need more than 0 values to unpack
 pump://JSON/read_clock/monitor/clock.json
 reporting monitor/clock.json
 pump://JSON/read_temp_basal/monitor/temp_basal.json
 reporting monitor/temp_basal.json
 pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-{"delta":2,"glucose":110,"avgdelta":-6}
-{"duration":26,"rate":0,"temp":"absolute"}
-{"netbasalinsulin":-0.15,"activity":-0.0001,"basaliob":-0.15,"hightempinsulin":0,"bolussnooze":0,"iob":-0.15}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.6,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-{"temp":"absolute","bg":110,"tick":"+2","eventualBG":79,"snoozeBG":79,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -36 BGI: 0.02","reason":"Eventual BG 79<90, setting -1.867U/hr, but 26m left and 0 ~ req 0U/hr: no action required"}
-No action required
+Traceback (most recent call last):
+  File "/usr/local/bin/openaps-report", line 4, in <module>
+    __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-report')
+  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
+    self.require(requires)[0].run_script(script_name, ns)
+  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
+    exec(code, namespace, namespace)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 82, in <module>
+    app( )
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/__init__.py", line 51, in __call__
+    self.run(self.args)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 75, in run
+    output = app(args, self)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/subcommand.py", line 52, in __call__
+    return self.method.main(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/invoke.py", line 40, in main
+    output = task.method(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 45, in __call__
+    output = self.main(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 639, in main
+    for rec in self.range( ):
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 67, in __call__
+    for record in page:
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 46, in download_page
+    for record in self.find_records(page):
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 157, in find_records
+    decoder = history.HistoryPage(response.data, self.inst)
+  File "/usr/local/lib/python2.7/dist-packages/decocare/history.py", line 777, in __init__
+    if lib.BangInt(crc) != computed:
+  File "/usr/local/lib/python2.7/dist-packages/decocare/lib.py", line 235, in BangInt
+    ( x, y ) = ints
+ValueError: need more than 0 values to unpack
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
