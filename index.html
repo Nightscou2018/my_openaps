@@ -1,10 +1,4 @@
-Fri Jul 22 19:24:01 PDT 2016
-pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
-reporting settings/insulin_sensitivities_raw.json
-pump://JSON/read_basal_profile_std/settings/basal_profile.json
-reporting settings/basal_profile.json
-get-profile://text/shell/settings/profile.json
-reporting settings/profile.json
+Fri Jul 22 19:30:01 PDT 2016
 curl://text/shell/monitor/glucose.json
 reporting monitor/glucose.json
 pump://JSON/read_clock/monitor/clock.json
@@ -17,42 +11,42 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":-2,"glucose":143,"avgdelta":-5}
-{"duration":21,"rate":0,"temp":"absolute"}
-{"netbasalinsulin":2,"activity":0.0456,"basaliob":0.942,"hightempinsulin":2.2,"bolussnooze":0.811,"iob":3.567}
+{"delta":-8,"glucose":135,"avgdelta":-4.667}
+{"duration":16,"rate":0,"temp":"absolute"}
+{"netbasalinsulin":1.9,"activity":0.0483,"basaliob":0.759,"hightempinsulin":2.2,"bolussnooze":0.59,"iob":3.232}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":143,"tick":-2,"eventualBG":42,"snoozeBG":78,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 6 BGI: -6.84","reason":"Eventual BG 42<90, Snooze BG 78, setting -2.32U/hr, but 21m left and 0 ~ req 0U/hr: no action required"}
-No action required
-monitor/battery.json  raised  bytearray index out of range
-pump://JSON/read_battery_status/monitor/battery.json
-Traceback (most recent call last):
-  File "/usr/local/bin/openaps-report", line 4, in <module>
-    __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-report')
-  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
-    self.require(requires)[0].run_script(script_name, ns)
-  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
-    exec(code, namespace, namespace)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 82, in <module>
-    app( )
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/__init__.py", line 51, in __call__
-    self.run(self.args)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 75, in run
-    output = app(args, self)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/subcommand.py", line 52, in __call__
-    return self.method.main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/invoke.py", line 40, in main
-    output = task.method(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 45, in __call__
-    output = self.main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 333, in main
-    return getattr(self.pump.model, name)(**self.get_params(args))
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
-    self.validate( )
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 17, in validate
-    data = self.response.getData( )
-  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 701, in getData
-    volt = lib.BangInt((bd[1], bd[2]))
-IndexError: bytearray index out of range
+{"temp":"absolute","bg":135,"tick":-8,"eventualBG":53,"snoozeBG":80,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 15 BGI: -7.24","reason":"Eventual BG 53<90, setting -2.133U/hr","duration":30,"rate":0}
+pump://JSON/set_temp_basal/enact/enacted.json
+reporting enact/enacted.json
+{
+  "bg": 135,
+  "temp": "absolute",
+  "snoozeBG": 80,
+  "recieved": true,
+  "rate": 0.0,
+  "reason": "Eventual BG 53<90, setting -2.133U/hr",
+  "eventualBG": 53,
+  "timestamp": "2016-07-22T19:26:04.960089",
+  "duration": 30,
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 15 BGI: -7.24",
+  "tick": -8
+}pump://JSON/read_battery_status/monitor/battery.json
+reporting monitor/battery.json
+pump://JSON/reservoir/monitor/reservoir.json
+reporting monitor/reservoir.json
+pump://JSON/read_status/monitor/status.json
+reporting monitor/status.json
+sleeping
+[Errno 2] No such file or directory
+openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
+
+tz://JSON/rezone/monitor/pumphistory-zoned.json
+reporting monitor/pumphistory-zoned.json
+Nothing to upload.
+ns://JSON/shell/nightscout/uploaded.json
+reporting nightscout/uploaded.json
+all done.
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
