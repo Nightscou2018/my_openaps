@@ -22,3 +22,4 @@ NOIPPASS=NOzzh8czj5
 ##-f /var/log/openaps.log
 #* * * * * /home/pi/bin/check-and-connect-bt-pan.sh
 */15 * * * * curl -u $NOIPUSER:$NOIPPASS "http://dynupdate.no-ip.com/nic/update?hostname=ksdcgm.no-ip.org&myip=`ip a | grep inet | grep -v -e inet6 -e 127 | awk '{print $2}' | cut -d/ -f1`" 
+*/30 * * * * cd /home/pi/openaps-20160611/my_openaps && /usr/bin/git update-index --no-assume-unchanged ./openaps.ini
