@@ -1,20 +1,19 @@
-Sat Jul 23 12:42:01 PDT 2016
-    setup_func(self)
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/mmeowlink.py", line 75, in setup_medtronic_link
-    link = builder.build(radio_type, port)
-  File "/home/pi/mmeowlink-source/mmeowlink/link_builder.py", line 16, in build
-    return SubgRfspyLink(port)
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/subg_rfspy_link.py", line 55, in __init__
-    self.open()
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/serial_interface.py", line 27, in open
-    self.check_setup()
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/subg_rfspy_link.py", line 71, in check_setup
-    self.serial_rf_spy.sync()
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/serial_rf_spy.py", line 117, in sync
-    raise CommsException("Could not get subg_rfspy state or version. Have you got the right port/device and radio_type?")
-mmeowlink.exceptions.CommsException: Could not get subg_rfspy state or version. Have you got the right port/device and radio_type?
-No action required
-pump://JSON/read_battery_status/monitor/battery.json
+Sat Jul 23 12:48:01 PDT 2016
+pump://JSON/set_temp_basal/enact/enacted.json
+reporting enact/enacted.json
+{
+  "bg": 205,
+  "temp": "absolute",
+  "snoozeBG": 132,
+  "recieved": true,
+  "rate": 0.8,
+  "reason": "111-132 in range: no temp required; setting current basal of 0.8 as temp. Setting neutral temp basal of 0.8U/hr",
+  "eventualBG": 111,
+  "timestamp": "2016-07-23T12:46:09.668259",
+  "duration": 30,
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 42 BGI: -11.87",
+  "tick": "+2"
+}pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
 reporting monitor/reservoir.json
