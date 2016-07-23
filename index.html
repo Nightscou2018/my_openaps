@@ -1,19 +1,16 @@
-Sat Jul 23 13:54:01 PDT 2016
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
+Sat Jul 23 14:00:02 PDT 2016
 reporting monitor/pumphistory.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":2,"glucose":193,"avgdelta":0.333}
-{"duration":26,"rate":0.8,"temp":"absolute"}
-{"netbasalinsulin":0.6,"activity":0.0527,"basaliob":0.326,"hightempinsulin":0.6,"bolussnooze":1.821,"iob":3.668}
+{"delta":2,"glucose":195,"avgdelta":1}
+{"duration":21,"rate":0.8,"temp":"absolute"}
+{"netbasalinsulin":0.6,"activity":0.0512,"basaliob":0.31,"hightempinsulin":0.6,"bolussnooze":1.503,"iob":3.417}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":0.8,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":193,"tick":"+2","eventualBG":108,"snoozeBG":190,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 25 BGI: -7.9","reason":"108-190 in range: no temp required, temp 0.8 ~ req 0.8U/hr"}
+{"temp":"absolute","bg":195,"tick":"+2","eventualBG":118,"snoozeBG":186,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 26 BGI: -7.68","reason":"118-186 in range: no temp required, temp 0.8 ~ req 0.8U/hr"}
 No action required
 pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
@@ -62,4 +59,5 @@ Traceback (most recent call last):
 ValueError: No JSON object could be decoded
 No recent treatments to upload
 all done.
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
