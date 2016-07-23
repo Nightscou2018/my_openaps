@@ -1,6 +1,4 @@
-Sat Jul 23 02:06:01 PDT 2016
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-use", line 63, in <module>
-    app( )
+Sat Jul 23 02:12:01 PDT 2016
   File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/__init__.py", line 51, in __call__
     self.run(self.args)
   File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-use", line 57, in run
@@ -29,6 +27,7 @@ Sat Jul 23 02:06:01 PDT 2016
     raise SerialException(msg.errno, "could not open port {}: {}".format(self._port, msg))
 serial.serialutil.SerialException: [Errno 2] could not open port /dev/mmeowlink: [Errno 2] No such file or directory: '/dev/mmeowlink'
 PREFLIGHT FAILED
+(pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
 (pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 pump://JSON/read_clock/monitor/clock.json
 mmtune:
