@@ -1,31 +1,60 @@
-Fri Jul 22 23:06:01 PDT 2016
+Fri Jul 22 23:12:01 PDT 2016
+    raise IOError("Lock at %r could not be obtained" % self._lockfilepath())
+IOError: Lock at '/home/pi/openaps-20160611/my_openaps/.git/index.lock' could not be obtained
+No action required
+pump://JSON/read_battery_status/monitor/battery.json
+reporting monitor/battery.json
+pump://JSON/reservoir/monitor/reservoir.json
+reporting monitor/reservoir.json
+pump://JSON/read_status/monitor/status.json
+reporting monitor/status.json
+sleeping
+[Errno 2] No such file or directory
+openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
+
+tz://JSON/rezone/monitor/pumphistory-zoned.json
+reporting monitor/pumphistory-zoned.json
 ns://JSON/shell/nightscout/uploaded.json
 reporting nightscout/uploaded.json
 all done.
 (pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-PREFLIGHT OK
-pump://JSON/read_settings/settings/settings.json
-reporting settings/settings.json
-pump://JSON/read_bg_targets/settings/bg_targets_raw.json
-reporting settings/bg_targets_raw.json
-pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
-reporting settings/insulin_sensitivities_raw.json
-pump://JSON/read_basal_profile_std/settings/basal_profile.json
-reporting settings/basal_profile.json
-get-profile://text/shell/settings/profile.json
-reporting settings/profile.json
-curl://text/shell/monitor/glucose.json
-reporting monitor/glucose.json
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
+mmtune:
+Traceback (most recent call last):
+  File "/usr/local/bin/openaps-use", line 4, in <module>
+    __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-use')
+  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
+    self.require(requires)[0].run_script(script_name, ns)
+  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
+    exec(code, namespace, namespace)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-use", line 63, in <module>
+    app( )
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/__init__.py", line 51, in __call__
+    self.run(self.args)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-use", line 57, in run
+    output = app(args, self)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/__init__.py", line 92, in __call__
+    return self.method.selected(args)(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/__init__.py", line 31, in __call__
+    return self.method(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 44, in __call__
+    self.before_main(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 61, in before_main
+    self.setup_medtronic( )
+  File "/home/pi/mmeowlink-source/mmeowlink/vendors/mmeowlink.py", line 92, in setup_medtronic
+    setup_medtronic_link(self)
+  File "/home/pi/mmeowlink-source/mmeowlink/vendors/mmeowlink.py", line 75, in setup_medtronic_link
+    link = builder.build(radio_type, port)
+  File "/home/pi/mmeowlink-source/mmeowlink/link_builder.py", line 16, in build
+    return SubgRfspyLink(port)
+  File "/home/pi/mmeowlink-source/mmeowlink/vendors/subg_rfspy_link.py", line 55, in __init__
+    self.open()
+  File "/home/pi/mmeowlink-source/mmeowlink/vendors/serial_interface.py", line 25, in open
+    self.serial = serial.Serial( self.device, self.speed )
+  File "/usr/local/lib/python2.7/dist-packages/serial/serialutil.py", line 182, in __init__
+    self.open()
+  File "/usr/local/lib/python2.7/dist-packages/serial/serialposix.py", line 247, in open
+    raise SerialException(msg.errno, "could not open port {}: {}".format(self._port, msg))
+serial.serialutil.SerialException: [Errno 2] could not open port /dev/mmeowlink: [Errno 2] No such file or directory: '/dev/mmeowlink'
+PREFLIGHT FAILED
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
