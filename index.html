@@ -1,7 +1,7 @@
-Sat Jul 23 09:06:01 PDT 2016
+Sat Jul 23 09:12:01 PDT 2016
 pump://JSON/read_clock/monitor/clock.json
 reporting monitor/clock.json
-PREFLIGHT OK
+PREFLIGHT WITH MMTUNE OK
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -14,22 +14,34 @@ get-profile://text/shell/settings/profile.json
 reporting settings/profile.json
 curl://text/shell/monitor/glucose.json
 reporting monitor/glucose.json
+monitor/clock.json  raised  bytearray index out of range
 pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-{"delta":1,"glucose":110,"avgdelta":0.667}
-{"duration":0,"rate":1.6,"temp":"absolute"}
-{"netbasalinsulin":-0.1,"activity":-0.0002,"basaliob":-0.002,"hightempinsulin":0,"bolussnooze":0,"iob":-0.002}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.6,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
-Setting neutral temp basal of 1.6U/hr
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-{"temp":"absolute","bg":110,"tick":"+1","eventualBG":112,"snoozeBG":112,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 2 BGI: 0.03","reason":"112-112 in range: no temp required; setting current basal of 1.6 as temp. Setting neutral temp basal of 1.6U/hr","duration":30,"rate":1.6}
+Traceback (most recent call last):
+  File "/usr/local/bin/openaps-report", line 4, in <module>
+    __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-report')
+  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
+    self.require(requires)[0].run_script(script_name, ns)
+  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
+    exec(code, namespace, namespace)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 82, in <module>
+    app( )
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/__init__.py", line 51, in __call__
+    self.run(self.args)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 75, in run
+    output = app(args, self)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/subcommand.py", line 52, in __call__
+    return self.method.main(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/invoke.py", line 40, in main
+    output = task.method(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 45, in __call__
+    output = self.main(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 327, in main
+    return self.pump.model.read_clock( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
+    self.validate( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 17, in validate
+    data = self.response.getData( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 642, in getData
+    'hour'  : int(data[0]),
+IndexError: bytearray index out of range
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
