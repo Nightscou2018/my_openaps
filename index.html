@@ -1,8 +1,37 @@
-Fri Jul 22 18:36:01 PDT 2016
-pump://JSON/read_clock/monitor/clock.json
-PREFLIGHT FAILED
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+Fri Jul 22 18:42:01 PDT 2016
 pump://JSON/read_clock/monitor/clock.json
 mmtune:
   "setFreq": 916.63,
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT WITH MMTUNE OK
+pump://JSON/read_settings/settings/settings.json
+reporting settings/settings.json
+pump://JSON/read_bg_targets/settings/bg_targets_raw.json
+reporting settings/bg_targets_raw.json
+pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
+reporting settings/insulin_sensitivities_raw.json
+pump://JSON/read_basal_profile_std/settings/basal_profile.json
+reporting settings/basal_profile.json
+get-profile://text/shell/settings/profile.json
+reporting settings/profile.json
+curl://text/shell/monitor/glucose.json
+reporting monitor/glucose.json
+dexcom_with_share://JSON/iter_glucose/monitor/dex_glucose.json
+reporting monitor/dex_glucose.json
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+pump://JSON/read_temp_basal/monitor/temp_basal.json
+reporting monitor/temp_basal.json
+pump://JSON/iter_pump_hours/monitor/pumphistory.json
+reporting monitor/pumphistory.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+{"delta":12,"glucose":167,"avgdelta":6}
+{"duration":1,"rate":3.525,"temp":"absolute"}
+{"netbasalinsulin":2.2,"activity":0.0203,"basaliob":1.729,"hightempinsulin":2.2,"bolussnooze":3.176,"iob":5.137}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
+Setting neutral temp basal of 1.2U/hr
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
