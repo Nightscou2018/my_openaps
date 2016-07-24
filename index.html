@@ -1,18 +1,17 @@
-Sun Jul 24 03:54:01 PDT 2016
-pump://JSON/set_temp_basal/enact/enacted.json
+Sun Jul 24 04:00:01 PDT 2016
 reporting enact/enacted.json
 {
-  "bg": 165,
+  "bg": 164,
   "temp": "absolute",
-  "snoozeBG": 124,
+  "snoozeBG": 127,
   "recieved": true,
-  "rate": 1.85,
-  "reason": "Eventual BG 124>=120, temp 1.75<1.87U/hr",
-  "eventualBG": 124,
-  "timestamp": "2016-07-24T03:51:12.990340",
+  "rate": 2.25,
+  "reason": "Eventual BG 127>=120, temp 1.85<2.23U/hr",
+  "eventualBG": 127,
+  "timestamp": "2016-07-24T03:56:09.135610",
   "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 4 BGI: -3.42",
-  "tick": -2
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 6 BGI: -3.36",
+  "tick": -1
 }pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
@@ -60,4 +59,5 @@ Traceback (most recent call last):
 ValueError: No JSON object could be decoded
 No recent treatments to upload
 all done.
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
