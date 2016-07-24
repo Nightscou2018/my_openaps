@@ -1,21 +1,18 @@
-Sun Jul 24 06:24:01 PDT 2016
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-{"delta":-3,"glucose":103,"avgdelta":-2}
-{"duration":16,"rate":1.425,"temp":"absolute"}
-{"netbasalinsulin":0.55,"activity":0.0007,"basaliob":-0.034,"hightempinsulin":0.7,"bolussnooze":0,"iob":-0.034}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.45,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-{"temp":"absolute","bg":103,"tick":-3,"eventualBG":93,"snoozeBG":93,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -11 BGI: -0.11","reason":"Eventual BG 93>90 but Avg. Delta -3.00 < Exp. Delta 0.2, temp 1.425 ~ req 1.45U/hr"}
-No action required
-pump://JSON/read_battery_status/monitor/battery.json
+Sun Jul 24 06:30:01 PDT 2016
+reporting enact/enacted.json
+{
+  "bg": 100,
+  "temp": "absolute",
+  "snoozeBG": 89,
+  "recieved": true,
+  "rate": 0.0,
+  "reason": "Eventual BG 89<90, setting -0.683U/hr",
+  "eventualBG": 89,
+  "timestamp": "2016-07-24T06:26:48.404919",
+  "duration": 30,
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -12 BGI: -0.04",
+  "tick": -2
+}pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
 reporting monitor/reservoir.json
@@ -63,3 +60,4 @@ ValueError: No JSON object could be decoded
 No recent treatments to upload
 all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
