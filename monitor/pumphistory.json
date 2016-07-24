@@ -2,6 +2,25 @@
   {
     "_type": "TempBasalDuration", 
     "duration (min)": 30, 
+    "_description": "TempBasalDuration 2016-07-24T04:01:56 head[2], body[0] op[0x16]", 
+    "timestamp": "2016-07-24T04:01:56", 
+    "_body": "", 
+    "_head": "1601", 
+    "_date": "78c1045810"
+  }, 
+  {
+    "_type": "TempBasal", 
+    "temp": "absolute", 
+    "_description": "TempBasal 2016-07-24T04:01:56 head[2], body[1] op[0x33]", 
+    "timestamp": "2016-07-24T04:01:56", 
+    "_body": "00", 
+    "_head": "3348", 
+    "rate": 1.8, 
+    "_date": "78c1045810"
+  }, 
+  {
+    "_type": "TempBasalDuration", 
+    "duration (min)": 30, 
     "_description": "TempBasalDuration 2016-07-24T03:56:52 head[2], body[0] op[0x16]", 
     "timestamp": "2016-07-24T03:56:52", 
     "_body": "", 
@@ -435,49 +454,5 @@
     "_head": "3362", 
     "rate": 2.45, 
     "_date": "77d5005810"
-  }, 
-  {
-    "_type": "TempBasalDuration", 
-    "duration (min)": 30, 
-    "_description": "TempBasalDuration 2016-07-24T00:01:55 head[2], body[0] op[0x16]", 
-    "timestamp": "2016-07-24T00:01:55", 
-    "_body": "", 
-    "_head": "1601", 
-    "_date": "77c1005810"
-  }, 
-  {
-    "_type": "TempBasal", 
-    "temp": "absolute", 
-    "_description": "TempBasal 2016-07-24T00:01:55 head[2], body[1] op[0x33]", 
-    "timestamp": "2016-07-24T00:01:55", 
-    "_body": "00", 
-    "_head": "332c", 
-    "rate": 1.1, 
-    "_date": "77c1005810"
-  }, 
-  {
-    "_type": "Model522ResultTotals", 
-    "_description": "Model522ResultTotals 2016-07-24T00:00:00 head[1], body[41] op[0x6d]", 
-    "timestamp": "2016-07-24T00:00:00", 
-    "_body": "0500906eb202000006ee03f23902fc2b005602fc2b017030000000018c3407020000050c00e8000000", 
-    "_head": "6d", 
-    "_date": "7790"
-  }, 
-  {
-    "_type": "ResultDailyTotal", 
-    "_description": "ResultDailyTotal 2016-07-24T00:00:00 head[5], body[0] op[0x07]", 
-    "timestamp": "2016-07-24T00:00:00", 
-    "_body": "", 
-    "valid_date": "2016-07-23", 
-    "_head": "07000006ee", 
-    "_date": "7790"
-  }, 
-  {
-    "_type": "PumpResume", 
-    "_description": "PumpResume 2016-07-23T23:58:33 head[2], body[0] op[0x1f]", 
-    "timestamp": "2016-07-23T23:58:33", 
-    "_body": "", 
-    "_head": "1f00", 
-    "_date": "61fa171710"
   }
 ]
