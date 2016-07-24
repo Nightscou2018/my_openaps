@@ -1,20 +1,18 @@
-Sat Jul 23 19:54:01 PDT 2016
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-BG data is too old, or clock set incorrectly Sat Jul 23 2016 19:40:18 GMT-0700 (PDT) vs Sat Jul 23 2016 19:51:12 GMT-0700 (PDT)
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-[{"msg":"BG data is too old, or clock set incorrectly Sat Jul 23 2016 19:40:18 GMT-0700 (PDT) vs Sat Jul 23 2016 19:51:12 GMT-0700 (PDT)"}]
-No action required
-pump://JSON/read_battery_status/monitor/battery.json
+Sat Jul 23 20:00:02 PDT 2016
+reporting enact/enacted.json
+{
+  "bg": 114,
+  "temp": "absolute",
+  "snoozeBG": 96,
+  "recieved": true,
+  "rate": 1.175,
+  "reason": "92-96 in range: no temp required; setting current basal of 1.2 as temp. Setting neutral temp basal of 1.2U/hr",
+  "eventualBG": 92,
+  "timestamp": "2016-07-23T19:56:12.135023",
+  "duration": 30,
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 3 BGI: -1.87",
+  "tick": -1
+}pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
 reporting monitor/reservoir.json
@@ -61,4 +59,5 @@ Traceback (most recent call last):
 ValueError: No JSON object could be decoded
 No recent treatments to upload
 all done.
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
