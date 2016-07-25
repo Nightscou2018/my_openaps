@@ -1,13 +1,4 @@
-Mon Jul 25 03:06:01 PDT 2016
-    ( x, y ) = ints
-ValueError: need more than 0 values to unpack
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-PREFLIGHT OK
-pump://JSON/read_settings/settings/settings.json
-reporting settings/settings.json
-pump://JSON/read_bg_targets/settings/bg_targets_raw.json
+Mon Jul 25 03:12:01 PDT 2016
 reporting settings/bg_targets_raw.json
 pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
 reporting settings/insulin_sensitivities_raw.json
@@ -29,4 +20,35 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
+{"delta":14,"glucose":88,"avgdelta":10}
+{"duration":25,"rate":1.25,"temp":"absolute"}
+{"netbasalinsulin":-2.1,"activity":-0.015,"basaliob":-1.419,"hightempinsulin":0,"bolussnooze":0,"iob":-1.419}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.25,"max_daily_basal":1.6,"max_basal":5,"min_bg":110,"max_bg":150,"sens":30}
+determine-basal://text/shell/enact/suggested.json
+reporting enact/suggested.json
+{"temp":"absolute","bg":88,"tick":"+14","eventualBG":154,"snoozeBG":154,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 130 Deviation: 23 BGI: 2.25","reason":"Eventual BG 154>=150, temp 1.25<2.85U/hr","duration":30,"rate":2.85}
+pump://JSON/set_temp_basal/enact/enacted.json
+reporting enact/enacted.json
+{
+  "bg": 88,
+  "temp": "absolute",
+  "snoozeBG": 154,
+  "recieved": true,
+  "rate": 2.85,
+  "reason": "Eventual BG 154>=150, temp 1.25<2.85U/hr",
+  "eventualBG": 154,
+  "timestamp": "2016-07-25T03:11:46.817919",
+  "duration": 30,
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 130 Deviation: 23 BGI: 2.25",
+  "tick": "+14"
+}pump://JSON/read_battery_status/monitor/battery.json
+reporting monitor/battery.json
+pump://JSON/reservoir/monitor/reservoir.json
+reporting monitor/reservoir.json
+pump://JSON/read_status/monitor/status.json
+reporting monitor/status.json
+sleeping
+[Errno 2] No such file or directory
+openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
+
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
