@@ -1,45 +1,9 @@
-Sun Jul 24 17:00:01 PDT 2016
-mmtune:
-Traceback (most recent call last):
-  File "/usr/local/bin/openaps-use", line 4, in <module>
-    __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-use')
-  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
-    self.require(requires)[0].run_script(script_name, ns)
-  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
-    exec(code, namespace, namespace)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-use", line 63, in <module>
-    app( )
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/__init__.py", line 51, in __call__
-    self.run(self.args)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-use", line 57, in run
-    output = app(args, self)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/__init__.py", line 92, in __call__
-    return self.method.selected(args)(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/__init__.py", line 31, in __call__
-    return self.method(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 45, in __call__
-    output = self.main(args, app)
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/mmeowlink.py", line 97, in main
-    return self.mmtune.run( )
-  File "/home/pi/mmeowlink-source/mmeowlink/mmtune.py", line 31, in run
-    results = self.scan_over_freq(self.scan_range['start'], self.scan_range['end'], 25)
-  File "/home/pi/mmeowlink-source/mmeowlink/mmtune.py", line 70, in scan_over_freq
-    results.append(self.run_trial("%0.3f" % cur_freq))
-  File "/home/pi/mmeowlink-source/mmeowlink/mmtune.py", line 51, in run_trial
-    packet = self.get_packet(0.080)
-  File "/home/pi/mmeowlink-source/mmeowlink/mmtune.py", line 81, in get_packet
-    return self.link.get_packet(timeout)
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/subg_rfspy_link.py", line 183, in get_packet
-    resp = rf_spy.do_command(SerialRfSpy.CMD_GET_PACKET, cmd_body, timeout=timeout + 1)
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/serial_rf_spy.py", line 60, in do_command
-    return self.get_response(timeout=timeout)
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/serial_rf_spy.py", line 86, in get_response
-    bytesToRead = self.ser.inWaiting()
-  File "/usr/local/lib/python2.7/dist-packages/serial/serialutil.py", line 518, in inWaiting
-    return self.in_waiting
-  File "/usr/local/lib/python2.7/dist-packages/serial/serialposix.py", line 433, in in_waiting
-    s = fcntl.ioctl(self.fd, TIOCINQ, TIOCM_zero_str)
-IOError: [Errno 5] Input/output error
+Sun Jul 24 17:06:01 PDT 2016
+  "setFreq": 916.63,
+pump://JSON/read_clock/monitor/clock.json
 PREFLIGHT FAILED
-(pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
 (pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+mmtune:
+  "setFreq": 916.63,
+(pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
