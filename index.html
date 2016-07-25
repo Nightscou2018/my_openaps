@@ -1,18 +1,18 @@
-Mon Jul 25 02:18:01 PDT 2016
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-{"delta":-2,"glucose":72,"avgdelta":-1.333}
-{"duration":21,"rate":0,"temp":"absolute"}
-{"netbasalinsulin":0.2,"activity":0.001,"basaliob":-0.818,"hightempinsulin":1.2,"bolussnooze":0,"iob":-0.818}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.1,"max_daily_basal":1.6,"max_basal":5,"min_bg":110,"max_bg":150,"sens":30}
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-{"temp":"absolute","bg":72,"tick":-2,"eventualBG":90,"snoozeBG":90,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 130 Deviation: -7 BGI: -0.15","reason":"BG 72<80, but 21m left and 0 ~ req 0U/hr: no action required"}
+Mon Jul 25 02:24:01 PDT 2016
+    output = self.main(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 431, in main
+    results = self.upload_program(program)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 524, in upload_program
+    return self.pump.model.set_temp_basal(**program)
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 225, in set_temp_basal
+    result.update(**self.read_temp_basal( ))
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
+    self.validate( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 17, in validate
+    data = self.response.getData( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 1202, in getData
+    temp = { 0: 'absolute', 1: 'percent' }[self.data[0]]
+IndexError: bytearray index out of range
 No action required
 pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
