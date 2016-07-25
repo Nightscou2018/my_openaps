@@ -254,8 +254,8 @@
     "timestamp": "2016-07-25T14:28:07-07:00", 
     "_body": "", 
     "programmed": 2.0, 
-    "_head": "01140203", 
-    "amount": 0.2, 
+    "_head": "01141403", 
+    "amount": 2.0, 
     "duration": 90, 
     "type": "square", 
     "_date": "47dcae1910"
