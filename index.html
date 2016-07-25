@@ -1,19 +1,17 @@
-Mon Jul 25 14:24:01 PDT 2016
-pump://JSON/set_temp_basal/enact/enacted.json
-reporting enact/enacted.json
-{
-  "bg": 199,
-  "temp": "absolute",
-  "snoozeBG": 151,
-  "recieved": true,
-  "rate": 1.175,
-  "reason": "Eventual BG 44<110, bolus snooze: eventual BG range 44-151; setting current basal of 1.2 as temp. Setting neutral temp basal of 1.2U/hr",
-  "eventualBG": 44,
-  "timestamp": "2016-07-25T14:21:11.953944",
-  "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 130 Deviation: 11 BGI: -6.58",
-  "tick": -3
-}pump://JSON/read_battery_status/monitor/battery.json
+Mon Jul 25 14:30:01 PDT 2016
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+{"delta":-3,"glucose":196,"avgdelta":-2.333}
+{"duration":26,"rate":1.175,"temp":"absolute"}
+{"netbasalinsulin":0.65,"activity":0.0489,"basaliob":0.733,"hightempinsulin":1,"bolussnooze":1.871,"iob":5.301}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":110,"max_bg":150,"sens":30}
+determine-basal://text/shell/enact/suggested.json
+reporting enact/suggested.json
+{"temp":"absolute","bg":196,"tick":-3,"eventualBG":50,"snoozeBG":134,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 130 Deviation: 13 BGI: -7.34","reason":"Eventual BG 50<110, bolus snooze: eventual BG range 50-134, temp 1.175 ~ req 1.2U/hr"}
+No action required
+pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
 pump://JSON/reservoir/monitor/reservoir.json
 reporting monitor/reservoir.json
@@ -60,4 +58,5 @@ Traceback (most recent call last):
 ValueError: No JSON object could be decoded
 No recent treatments to upload
 all done.
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
