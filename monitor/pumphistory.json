@@ -1,5 +1,24 @@
 [
   {
+    "_type": "Prime", 
+    "type": "manual", 
+    "_description": "Prime 2016-07-24T23:12:32 head[5], body[0] op[0x03]", 
+    "timestamp": "2016-07-24T23:12:32", 
+    "_body": "", 
+    "fixed": 0.0, 
+    "_head": "0300000000", 
+    "amount": 0.0, 
+    "_date": "60cc371810"
+  }, 
+  {
+    "_type": "Rewind", 
+    "_description": "Rewind 2016-07-24T23:11:29 head[2], body[0] op[0x21]", 
+    "timestamp": "2016-07-24T23:11:29", 
+    "_body": "", 
+    "_head": "2100", 
+    "_date": "5dcb171810"
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "duration (min)": 30, 
     "_description": "TempBasalDuration 2016-07-24T22:41:59 head[2], body[0] op[0x16]", 
@@ -259,26 +278,5 @@
     "_head": "01323200", 
     "amount": 5.0, 
     "_date": "42d4531810"
-  }, 
-  {
-    "programmed": 2.0, 
-    "_type": "Bolus", 
-    "type": "normal", 
-    "_description": "Bolus 2016-07-24T18:50:40 head[4], body[0] op[0x01]", 
-    "duration": 0, 
-    "timestamp": "2016-07-24T18:50:40", 
-    "_body": "", 
-    "_head": "01141400", 
-    "amount": 2.0, 
-    "_date": "68f2521810"
-  }, 
-  {
-    "_type": "LowReservoir", 
-    "_description": "LowReservoir 2016-07-24T18:50:54 head[2], body[0] op[0x34]", 
-    "timestamp": "2016-07-24T18:50:54", 
-    "_body": "", 
-    "_head": "34c8", 
-    "amount": 20.0, 
-    "_date": "76f2121810"
   }
 ]
