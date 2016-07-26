@@ -1,1 +1,61 @@
-[]
+[
+  {
+    "carbs": "76", 
+    "square": {
+      "programmed": 3, 
+      "_type": "Bolus", 
+      "_description": "Bolus 2016-07-26T13:05:34 head[4], body[0] op[0x01]", 
+      "timestamp": "2016-07-26T13:05:34-07:00", 
+      "_body": "", 
+      "_head": "011e1e02", 
+      "amount": 3, 
+      "duration": 60, 
+      "type": "square", 
+      "_date": "62c5ad1a10"
+    }, 
+    "ratio": "9", 
+    "bolus": {
+      "programmed": 5.4, 
+      "_type": "Bolus", 
+      "_description": "Bolus 2016-07-26T13:01:58 head[4], body[0] op[0x01]", 
+      "timestamp": "2016-07-26T13:01:58-07:00", 
+      "_body": "", 
+      "_head": "01363600", 
+      "amount": 5.4, 
+      "duration": 0, 
+      "type": "normal", 
+      "_date": "7ac18d1a10"
+    }, 
+    "timestamp": "2016-07-26T13:01:58-07:00", 
+    "created_at": "2016-07-26T13:01:58-07:00", 
+    "wizard": {
+      "_type": "BolusWizard", 
+      "bg": 0, 
+      "bg_target_high": 120, 
+      "correction_estimate": 0, 
+      "unknown_byte[10]": 0, 
+      "_description": "BolusWizard 2016-07-26T13:01:58 head[2], body[13] op[0x5b]", 
+      "timestamp": "2016-07-26T13:01:58-07:00", 
+      "_body": "4c50091e5a0054000000005478", 
+      "unknown_byte[8]": 0, 
+      "carb_ratio": 9, 
+      "food_estimate": 8.4, 
+      "unabsorbed_insulin_total": 0, 
+      "_byte[5]": 0, 
+      "carb_input": 76, 
+      "_head": "5b00", 
+      "unabsorbed_insulin_count": "??", 
+      "bolus_estimate": 8.4, 
+      "_byte[7]": 0, 
+      "sensitivity": 30, 
+      "_date": "7ac10d1a10", 
+      "bg_target_low": 90
+    }, 
+    "enteredBy": "openaps://medtronic/722", 
+    "insulin": "8.4", 
+    "eventType": "Meal Bolus", 
+    "duration": "0", 
+    "notes": "DualWave bolus for 60 minutes\nProgrammed bolus 5.4\nDelivered bolus 5.4\nPercent delivered:  100%\nProgrammed square 3\nDelivered square 3\nSuccess:  100%\nFood estimate 8.4\nCorrection estimate 0\nBolus estimate 8.4\nTarget low 90\nTarget high 120\nHypothetical glucose delta -252", 
+    "medtronic": "mm://openaps/mm-format-ns-treatments/Meal Bolus"
+  }
+]
