@@ -1,15 +1,8 @@
-Tue Jul 26 15:18:01 PDT 2016
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/invoke.py", line 40, in main
-    output = task.method(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 45, in __call__
-    output = self.main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 327, in main
-    return self.pump.model.read_clock( )
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
-    self.validate( )
-  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 17, in validate
-    data = self.response.getData( )
-  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 642, in getData
-    'hour'  : int(data[0]),
-IndexError: bytearray index out of range
+Tue Jul 26 15:24:01 PDT 2016
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+mmtune:
+  "setFreq": 916.63,
+pump://JSON/read_clock/monitor/clock.json
+PREFLIGHT FAILED
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
