@@ -1,18 +1,15 @@
-Tue Jul 26 15:12:01 PDT 2016
-pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-Nothing to upload.
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
+Tue Jul 26 15:18:01 PDT 2016
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/invoke.py", line 40, in main
+    output = task.method(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 45, in __call__
+    output = self.main(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 327, in main
+    return self.pump.model.read_clock( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 26, in __call__
+    self.validate( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 17, in validate
+    data = self.response.getData( )
+  File "/usr/local/lib/python2.7/dist-packages/decocare/commands.py", line 642, in getData
+    'hour'  : int(data[0]),
+IndexError: bytearray index out of range
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
