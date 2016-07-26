@@ -1,4 +1,10 @@
-Tue Jul 26 01:30:01 PDT 2016
+Tue Jul 26 01:36:01 PDT 2016
+reporting nightscout/uploaded.json
+all done.
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT OK
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -21,28 +27,8 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":0,"glucose":161,"avgdelta":10}
-{"duration":26,"rate":1.1,"temp":"absolute"}
-{"netbasalinsulin":0.4,"activity":0.0138,"basaliob":0.754,"hightempinsulin":1.4,"bolussnooze":1.917,"iob":2.879}
+{"delta":7,"glucose":172,"avgdelta":3.667}
+{"duration":16,"rate":1.1,"temp":"absolute"}
+{"netbasalinsulin":0.4,"activity":0.0116,"basaliob":0.782,"hightempinsulin":1.4,"bolussnooze":1.716,"iob":2.762}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.1,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-{"temp":"absolute","bg":161,"tick":"+0","eventualBG":81,"snoozeBG":167,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 6 BGI: -2.07","reason":"Eventual BG 81<90, bolus snooze: eventual BG range 81-167, temp 1.1 ~ req 1.1U/hr"}
-No action required
-pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
