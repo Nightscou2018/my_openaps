@@ -1,5 +1,22 @@
 [
   {
+    "_type": "Model522ResultTotals", 
+    "_description": "Model522ResultTotals 2016-07-26T00:00:00 head[1], body[41] op[0x6d]", 
+    "timestamp": "2016-07-26T00:00:00", 
+    "_body": "050c00e80000000009cc03fc2905d03b00d205d03b039c3e00400401f42208040001030c00e8000000", 
+    "_head": "6d", 
+    "_date": "7990"
+  }, 
+  {
+    "_type": "ResultDailyTotal", 
+    "_description": "ResultDailyTotal 2016-07-26T00:00:00 head[5], body[0] op[0x07]", 
+    "timestamp": "2016-07-26T00:00:00", 
+    "_body": "", 
+    "valid_date": "2016-07-25", 
+    "_head": "07000009cc", 
+    "_date": "7990"
+  }, 
+  {
     "_type": "OldBolusWizardChange", 
     "stale": {
       "insulin_sensitivies": [
