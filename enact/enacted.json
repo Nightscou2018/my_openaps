@@ -1,13 +1,13 @@
 {
-  "bg": 76, 
+  "bg": 61, 
   "temp": "absolute", 
-  "snoozeBG": 62, 
+  "snoozeBG": 93, 
   "recieved": true, 
-  "rate": 0.0, 
-  "reason": "Eventual BG 62<90, setting -4.133U/hr", 
-  "eventualBG": 62, 
-  "timestamp": "2016-07-26T07:41:07.013398", 
+  "rate": 1.6, 
+  "reason": "BG 61<70, delta 2>0; setting current basal of 1.6 as temp. Setting neutral temp basal of 1.6U/hr", 
+  "eventualBG": 93, 
+  "timestamp": "2016-07-26T08:06:06.420260", 
   "duration": 30, 
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -36 BGI: -0.62", 
-  "tick": -9
+  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -10 BGI: 0.75", 
+  "tick": "+2"
 }
