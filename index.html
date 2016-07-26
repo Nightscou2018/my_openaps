@@ -1,35 +1,16 @@
-Tue Jul 26 14:06:01 PDT 2016
-pump://JSON/read_clock/monitor/clock.json
-PREFLIGHT FAILED
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-PREFLIGHT OK
-pump://JSON/read_settings/settings/settings.json
-reporting settings/settings.json
-pump://JSON/read_bg_targets/settings/bg_targets_raw.json
-reporting settings/bg_targets_raw.json
-pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
-reporting settings/insulin_sensitivities_raw.json
-pump://JSON/read_basal_profile_std/settings/basal_profile.json
-reporting settings/basal_profile.json
-get-profile://text/shell/settings/profile.json
-reporting settings/profile.json
-curl://text/shell/monitor/glucose.json
-reporting monitor/glucose.json
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-pump://JSON/read_temp_basal/monitor/temp_basal.json
-reporting monitor/temp_basal.json
-pump://JSON/iter_pump_hours/monitor/pumphistory.json
-reporting monitor/pumphistory.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-BG data is too old, or clock set incorrectly Tue Jul 26 2016 08:55:46 GMT-0700 (PDT) vs Tue Jul 26 2016 14:05:58 GMT-0700 (PDT)
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-[{"msg":"BG data is too old, or clock set incorrectly Tue Jul 26 2016 08:55:46 GMT-0700 (PDT) vs Tue Jul 26 2016 14:05:58 GMT-0700 (PDT)"}]
-No action required
+Tue Jul 26 14:12:01 PDT 2016
+    output = self.main(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 639, in main
+    for rec in self.range( ):
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 67, in __call__
+    for record in page:
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 46, in download_page
+    for record in self.find_records(page):
+  File "/usr/local/lib/python2.7/dist-packages/decocare/models/__init__.py", line 157, in find_records
+    decoder = history.HistoryPage(response.data, self.inst)
+  File "/usr/local/lib/python2.7/dist-packages/decocare/history.py", line 777, in __init__
+    if lib.BangInt(crc) != computed:
+  File "/usr/local/lib/python2.7/dist-packages/decocare/lib.py", line 235, in BangInt
+    ( x, y ) = ints
+ValueError: need more than 0 values to unpack
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
