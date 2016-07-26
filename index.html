@@ -1,4 +1,9 @@
-Mon Jul 25 17:00:01 PDT 2016
+Mon Jul 25 17:06:01 PDT 2016
+all done.
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT OK
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -21,29 +26,9 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":-4,"glucose":163,"avgdelta":-3.667}
-{"duration":26,"rate":1.175,"temp":"absolute"}
-{"netbasalinsulin":0.2,"activity":0.0693,"basaliob":0.165,"hightempinsulin":0.2,"bolussnooze":2.084,"iob":4.852}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":110,"sens":30}
+BG data is too old, or clock set incorrectly Mon Jul 25 2016 16:55:47 GMT-0700 (PDT) vs Mon Jul 25 2016 17:05:59 GMT-0700 (PDT)
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":163,"tick":-4,"eventualBG":36,"snoozeBG":130,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 100 Deviation: 19 BGI: -10.4","reason":"Eventual BG 36<90, bolus snooze: eventual BG range 36-130, temp 1.175 ~ req 1.2U/hr"}
+[{"msg":"BG data is too old, or clock set incorrectly Mon Jul 25 2016 16:55:47 GMT-0700 (PDT) vs Mon Jul 25 2016 17:05:59 GMT-0700 (PDT)"}]
 No action required
-pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-Nothing to upload.
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
