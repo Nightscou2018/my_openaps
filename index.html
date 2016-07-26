@@ -1,32 +1,9 @@
-Tue Jul 26 14:36:01 PDT 2016
-calculate-iob://JSON/shell/monitor/iob.json
-reporting monitor/iob.json
-BG data is too old, or clock set incorrectly Tue Jul 26 2016 08:55:46 GMT-0700 (PDT) vs Tue Jul 26 2016 14:31:05 GMT-0700 (PDT)
-determine-basal://text/shell/enact/suggested.json
-reporting enact/suggested.json
-[{"msg":"BG data is too old, or clock set incorrectly Tue Jul 26 2016 08:55:46 GMT-0700 (PDT) vs Tue Jul 26 2016 14:31:05 GMT-0700 (PDT)"}]
-No action required
-pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-Nothing to upload.
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
+Tue Jul 26 14:42:01 PDT 2016
+process is running and remove the file manually to continue.'
 (pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 pump://JSON/read_clock/monitor/clock.json
 mmtune:
-  "setFreq": 916.708,
+  "setFreq": 916.66,
 pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-PREFLIGHT WITH MMTUNE OK
+PREFLIGHT FAILED
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
