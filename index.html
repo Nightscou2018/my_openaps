@@ -1,6 +1,4 @@
-Wed Jul 27 14:48:01 PDT 2016
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
+Wed Jul 27 14:54:01 PDT 2016
 pump://JSON/read_temp_basal/monitor/temp_basal.json
 reporting monitor/temp_basal.json
 pump://JSON/iter_pump_hours/monitor/pumphistory.json
@@ -9,13 +7,13 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":2,"glucose":229,"avgdelta":3.667}
-{"duration":26,"rate":4.775,"temp":"absolute"}
-{"netbasalinsulin":1.25,"activity":0.0657,"basaliob":0.706,"hightempinsulin":1.45,"bolussnooze":0.021,"iob":3.665}
+{"delta":1,"glucose":230,"avgdelta":2.333}
+{"duration":21,"rate":4.775,"temp":"absolute"}
+{"netbasalinsulin":1.45,"activity":0.0626,"basaliob":1.003,"hightempinsulin":1.65,"bolussnooze":0,"iob":3.651}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":229,"tick":"+2","eventualBG":155,"snoozeBG":156,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 36 BGI: -9.85","reason":"Eventual BG 155>=120, temp 4.775 >~ req 4.533U/hr"}
+{"temp":"absolute","bg":230,"tick":"+1","eventualBG":151,"snoozeBG":151,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 31 BGI: -9.39","reason":"Eventual BG 151>=120, temp 4.775 >~ req 4.267U/hr"}
 No action required
 pump://JSON/read_battery_status/monitor/battery.json
 reporting monitor/battery.json
@@ -30,6 +28,38 @@ openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
 tz://JSON/rezone/monitor/pumphistory-zoned.json
 reporting monitor/pumphistory-zoned.json
 ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
+No JSON object could be decoded
+
+Traceback (most recent call last):
+  File "/usr/local/bin/openaps-report", line 4, in <module>
+    __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-report')
+  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
+    self.require(requires)[0].run_script(script_name, ns)
+  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
+    exec(code, namespace, namespace)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 82, in <module>
+    app( )
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/__init__.py", line 51, in __call__
+    self.run(self.args)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 75, in run
+    output = app(args, self)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/subcommand.py", line 52, in __call__
+    return self.method.main(args, app)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/invoke.py", line 48, in main
+    reporters.Reporter(report, device, task)(output)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/reporters/__init__.py", line 33, in __call__
+    self.blob = self.serialize(data)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/reporters/__init__.py", line 31, in serialize
+    return self.method.serialize(render(data), self)
+  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/process.py", line 56, in prerender_json
+    return json.loads(data)
+  File "/usr/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+No recent treatments to upload
 all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
