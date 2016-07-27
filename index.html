@@ -1,4 +1,7 @@
-Wed Jul 27 03:00:01 PDT 2016
+Wed Jul 27 03:06:01 PDT 2016
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT OK
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -21,28 +24,12 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":-1,"glucose":205,"avgdelta":-0.667}
-{"duration":21,"rate":3.85,"temp":"absolute"}
-{"netbasalinsulin":6.35,"activity":0.0298,"basaliob":2.293,"hightempinsulin":6.35,"bolussnooze":0,"iob":2.293}
-{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.1,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
+{"delta":-1,"glucose":202,"avgdelta":-1.333}
+{"duration":11,"rate":3.85,"temp":"absolute"}
+{"netbasalinsulin":5.85,"activity":0.0267,"basaliob":2.323,"hightempinsulin":5.85,"bolussnooze":0,"iob":2.323}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.25,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":205,"tick":-1,"eventualBG":146,"snoozeBG":146,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 10 BGI: -4.47","reason":"Eventual BG 146>=120, temp 3.85 >~ req 3.34U/hr"}
+{"temp":"absolute","bg":202,"tick":-1,"eventualBG":140,"snoozeBG":140,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 8 BGI: -4","reason":"Eventual BG 140>=120, temp 3.85 >~ req 2.97U/hr"}
 No action required
-pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
