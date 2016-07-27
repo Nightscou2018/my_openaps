@@ -1,75 +1,47 @@
-Wed Jul 27 00:12:01 PDT 2016
+Wed Jul 27 00:18:01 PDT 2016
+pump://JSON/read_settings/settings/settings.json
+reporting settings/settings.json
+pump://JSON/read_bg_targets/settings/bg_targets_raw.json
+reporting settings/bg_targets_raw.json
+pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
+reporting settings/insulin_sensitivities_raw.json
+pump://JSON/read_basal_profile_std/settings/basal_profile.json
+reporting settings/basal_profile.json
+get-profile://text/shell/settings/profile.json
+reporting settings/profile.json
+curl://text/shell/monitor/glucose.json
+reporting monitor/glucose.json
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+pump://JSON/read_temp_basal/monitor/temp_basal.json
+reporting monitor/temp_basal.json
+pump://JSON/iter_pump_hours/monitor/pumphistory.json
+reporting monitor/pumphistory.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+{"delta":0,"glucose":221,"avgdelta":0}
+{"duration":11,"rate":4.775,"temp":"absolute"}
+{"netbasalinsulin":2.2,"activity":0.0526,"basaliob":2.054,"hightempinsulin":2.2,"bolussnooze":0,"iob":3.436}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.1,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
+determine-basal://text/shell/enact/suggested.json
+reporting enact/suggested.json
+{"temp":"absolute","bg":221,"tick":"+0","eventualBG":142,"snoozeBG":142,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 24 BGI: -7.89","reason":"Eventual BG 142>=120, temp 4.775 >~ req 3.567U/hr"}
+No action required
+pump://JSON/read_battery_status/monitor/battery.json
+reporting monitor/battery.json
+pump://JSON/reservoir/monitor/reservoir.json
+reporting monitor/reservoir.json
+pump://JSON/read_status/monitor/status.json
+reporting monitor/status.json
+sleeping
+[Errno 2] No such file or directory
+openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
 
-body {
-  padding: 80px 100px;
-  font: 13px "Helvetica Neue", "Lucida Grande", "Arial";
-  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));
-  background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);
-  background-repeat: no-repeat;
-  color: #555;
-  -webkit-font-smoothing: antialiased;
-}
-h1, h2 {
-  font-size: 22px;
-  color: #343434;
-}
-h1 em, h2 em {
-  padding: 0 5px;
-  font-weight: normal;
-}
-h1 {
-  font-size: 60px;
-}
-h2 {
-  margin-top: 10px;
-}
-ul li {
-  list-style: none;
-}
-#stacktrace {
-  margin-left: 60px;
-}
-</style>
-  </head>
-  <body>
-    <div id="wrapper">
-      <h1>Connect</h1>
-      <h2><em>400</em> SyntaxError: Unexpected token N</h2>
-      <ul id="stacktrace"><li> &nbsp; &nbsp;at parse (D:\home\site\wwwroot\node_modules\body-parser\lib\types\json.js:83:15)</li><li> &nbsp; &nbsp;at D:\home\site\wwwroot\node_modules\body-parser\lib\read.js:116:18</li><li> &nbsp; &nbsp;at invokeCallback (D:\home\site\wwwroot\node_modules\raw-body\index.js:262:16)</li><li> &nbsp; &nbsp;at done (D:\home\site\wwwroot\node_modules\raw-body\index.js:251:7)</li><li> &nbsp; &nbsp;at IncomingMessage.onEnd (D:\home\site\wwwroot\node_modules\raw-body\index.js:308:7)</li><li> &nbsp; &nbsp;at IncomingMessage.emit (events.js:92:17)</li><li> &nbsp; &nbsp;at _stream_readable.js:944:16</li><li> &nbsp; &nbsp;at process._tickDomainCallback (node.js:492:13)</li></ul>
-    </div>
-  </body>
-</html>
-
-Traceback (most recent call last):
-  File "/usr/local/bin/openaps-report", line 4, in <module>
-    __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-report')
-  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
-    self.require(requires)[0].run_script(script_name, ns)
-  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
-    exec(code, namespace, namespace)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 82, in <module>
-    app( )
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/__init__.py", line 51, in __call__
-    self.run(self.args)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-report", line 75, in run
-    output = app(args, self)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/subcommand.py", line 52, in __call__
-    return self.method.main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/invoke.py", line 48, in main
-    reporters.Reporter(report, device, task)(output)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/reporters/__init__.py", line 33, in __call__
-    self.blob = self.serialize(data)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/reports/reporters/__init__.py", line 31, in serialize
-    return self.method.serialize(render(data), self)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/process.py", line 56, in prerender_json
-    return json.loads(data)
-  File "/usr/lib/python2.7/json/__init__.py", line 338, in loads
-    return _default_decoder.decode(s)
-  File "/usr/lib/python2.7/json/decoder.py", line 366, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/usr/lib/python2.7/json/decoder.py", line 384, in raw_decode
-    raise ValueError("No JSON object could be decoded")
-ValueError: No JSON object could be decoded
-No recent treatments to upload
+tz://JSON/rezone/monitor/pumphistory-zoned.json
+reporting monitor/pumphistory-zoned.json
+ns://JSON/shell/nightscout/uploaded.json
+reporting nightscout/uploaded.json
 all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
