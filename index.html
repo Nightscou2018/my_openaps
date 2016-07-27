@@ -1,9 +1,4 @@
-Wed Jul 27 04:06:01 PDT 2016
-all done.
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-PREFLIGHT OK
+Wed Jul 27 04:12:01 PDT 2016
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -26,11 +21,27 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":-2,"glucose":180,"avgdelta":-2}
-{"duration":21,"rate":2,"temp":"absolute"}
-{"netbasalinsulin":4.35,"activity":0.0273,"basaliob":1.897,"hightempinsulin":4.35,"bolussnooze":0,"iob":1.897}
+{"delta":-2,"glucose":178,"avgdelta":-2}
+{"duration":26,"rate":2.2,"temp":"absolute"}
+{"netbasalinsulin":4.35,"activity":0.0272,"basaliob":1.859,"hightempinsulin":4.35,"bolussnooze":0,"iob":1.859}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.25,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":180,"tick":-2,"eventualBG":129,"snoozeBG":129,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 6 BGI: -4.1","reason":"Eventual BG 129>=120, temp 2<2.19U/hr","duration":30,"rate":2.2}
+{"temp":"absolute","bg":178,"tick":-2,"eventualBG":128,"snoozeBG":128,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 6 BGI: -4.08","reason":"Eventual BG 128>=120, temp 2.2 >~ req 2.13U/hr"}
+No action required
+pump://JSON/read_battery_status/monitor/battery.json
+reporting monitor/battery.json
+pump://JSON/reservoir/monitor/reservoir.json
+reporting monitor/reservoir.json
+pump://JSON/read_status/monitor/status.json
+reporting monitor/status.json
+sleeping
+[Errno 2] No such file or directory
+openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
+
+tz://JSON/rezone/monitor/pumphistory-zoned.json
+reporting monitor/pumphistory-zoned.json
+ns://JSON/shell/nightscout/uploaded.json
+reporting nightscout/uploaded.json
+all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
