@@ -1,4 +1,20 @@
-Wed Jul 27 03:30:02 PDT 2016
+Wed Jul 27 03:36:02 PDT 2016
+reporting nightscout/uploaded.json
+all done.
+(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT OK
+pump://JSON/read_settings/settings/settings.json
+reporting settings/settings.json
+pump://JSON/read_bg_targets/settings/bg_targets_raw.json
+reporting settings/bg_targets_raw.json
+pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
+reporting settings/insulin_sensitivities_raw.json
+pump://JSON/read_basal_profile_std/settings/basal_profile.json
+reporting settings/basal_profile.json
+get-profile://text/shell/settings/profile.json
+reporting settings/profile.json
 curl://text/shell/monitor/glucose.json
 reporting monitor/glucose.json
 pump://JSON/read_clock/monitor/clock.json
@@ -11,41 +27,11 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":-1,"glucose":195,"avgdelta":-2}
-{"duration":26,"rate":1.6,"temp":"absolute"}
-{"netbasalinsulin":5.25,"activity":0.0254,"basaliob":2.362,"hightempinsulin":5.25,"bolussnooze":0,"iob":2.362}
+{"delta":-1,"glucose":193,"avgdelta":-1}
+{"duration":26,"rate":2.275,"temp":"absolute"}
+{"netbasalinsulin":5.1,"activity":0.0258,"basaliob":2.255,"hightempinsulin":5.1,"bolussnooze":0,"iob":2.255}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.25,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":195,"tick":-1,"eventualBG":129,"snoozeBG":129,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 5 BGI: -3.81","reason":"Eventual BG 129>=120, temp 1.6<2.13U/hr","duration":30,"rate":2.15}
-pump://JSON/set_temp_basal/enact/enacted.json
-reporting enact/enacted.json
-{
-  "bg": 195,
-  "temp": "absolute",
-  "snoozeBG": 129,
-  "recieved": true,
-  "rate": 2.125,
-  "reason": "Eventual BG 129>=120, temp 1.6<2.13U/hr",
-  "eventualBG": 129,
-  "timestamp": "2016-07-27T03:26:04.942011",
-  "duration": 30,
-  "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 5 BGI: -3.81",
-  "tick": -1
-}pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+{"temp":"absolute","bg":193,"tick":-1,"eventualBG":134,"snoozeBG":134,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 9 BGI: -3.87","reason":"Eventual BG 134>=120, temp 2.275<2.77U/hr","duration":30,"rate":2.75}
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
