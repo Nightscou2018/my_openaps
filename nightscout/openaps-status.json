@@ -7,7 +7,7 @@
     }, 
     "status": {
       "status": "normal", 
-      "timestamp": "2016-07-28T02:51:28.000Z", 
+      "timestamp": "2016-07-28T03:06:04.000Z", 
       "bolusing": false, 
       "suspended": false
     }, 
@@ -15,32 +15,37 @@
     "clock": "2016-06-30T22:50:55-07:00"
   }, 
   "openaps": {
-    "suggested": [
-      {
-        "msg": "BG data is too old, or clock set incorrectly Wed Jul 27 2016 19:40:41 GMT-0700 (PDT) vs Wed Jul 27 2016 19:51:22 GMT-0700 (PDT)"
-      }
-    ], 
+    "suggested": {
+      "bg": 66, 
+      "temp": "absolute", 
+      "snoozeBG": 21, 
+      "timestamp": "2016-07-28T03:05:58.000Z", 
+      "reason": "BG 66<70, but 26m left and 0 ~ req 0U/hr: no action required", 
+      "eventualBG": 21, 
+      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -64 BGI: 0.41", 
+      "tick": -8
+    }, 
     "iob": {
-      "netbasalinsulin": 0.1, 
-      "timestamp": "2016-07-28T02:51:15.000Z", 
-      "activity": 0.0031, 
-      "basaliob": -0.466, 
-      "hightempinsulin": 0.85, 
+      "netbasalinsulin": -0.55, 
+      "timestamp": "2016-07-28T03:05:51.000Z", 
+      "activity": -0.0027, 
+      "basaliob": -0.634, 
+      "hightempinsulin": 0.45, 
       "bolussnooze": 0, 
-      "iob": -0.387
+      "iob": -0.625
     }, 
     "enacted": {
-      "bg": 92, 
+      "bg": 74, 
       "temp": "absolute", 
-      "snoozeBG": 80, 
+      "snoozeBG": 33, 
       "recieved": true, 
-      "reason": "Eventual BG 80<90, setting -2.133U/hr", 
+      "reason": "Eventual BG 33<90, setting -8.4U/hr", 
       "rate": 0, 
-      "eventualBG": 80, 
-      "timestamp": "2016-07-28T02:46:01.000Z", 
+      "eventualBG": 33, 
+      "timestamp": "2016-07-28T03:01:08.000Z", 
       "duration": 30, 
-      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -19 BGI: -0.82", 
-      "tick": -5
+      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -57 BGI: 0.12", 
+      "tick": -18
     }
   }
 }
