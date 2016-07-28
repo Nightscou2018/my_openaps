@@ -1,9 +1,4 @@
-Wed Jul 27 20:06:01 PDT 2016
-all done.
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
-pump://JSON/read_clock/monitor/clock.json
-reporting monitor/clock.json
-PREFLIGHT OK
+Wed Jul 27 20:12:01 PDT 2016
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -26,12 +21,27 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-{"delta":-8,"glucose":66,"avgdelta":-10.333}
-{"duration":26,"rate":0,"temp":"absolute"}
-{"netbasalinsulin":-0.55,"activity":-0.0027,"basaliob":-0.634,"hightempinsulin":0.45,"bolussnooze":0,"iob":-0.625}
+{"delta":-8,"glucose":58,"avgdelta":-11.333}
+{"duration":21,"rate":0,"temp":"absolute"}
+{"netbasalinsulin":-0.75,"activity":-0.0045,"basaliob":-0.702,"hightempinsulin":0.35,"bolussnooze":0,"iob":-0.702}
 {"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-{"temp":"absolute","bg":66,"tick":-8,"eventualBG":21,"snoozeBG":21,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -64 BGI: 0.41","reason":"BG 66<70, but 26m left and 0 ~ req 0U/hr: no action required"}
+{"temp":"absolute","bg":58,"tick":-8,"eventualBG":7,"snoozeBG":7,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: -72 BGI: 0.68","reason":"BG 58<70, but 21m left and 0 ~ req 0U/hr: no action required"}
 No action required
+pump://JSON/read_battery_status/monitor/battery.json
+reporting monitor/battery.json
+pump://JSON/reservoir/monitor/reservoir.json
+reporting monitor/reservoir.json
+pump://JSON/read_status/monitor/status.json
+reporting monitor/status.json
+sleeping
+[Errno 2] No such file or directory
+openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
+
+tz://JSON/rezone/monitor/pumphistory-zoned.json
+reporting monitor/pumphistory-zoned.json
+ns://JSON/shell/nightscout/uploaded.json
+reporting nightscout/uploaded.json
+all done.
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
