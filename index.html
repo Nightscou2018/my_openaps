@@ -1,4 +1,7 @@
-Thu Jul 28 12:30:01 PDT 2016
+Thu Jul 28 12:36:01 PDT 2016
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT OK
 pump://JSON/read_settings/settings/settings.json
 reporting settings/settings.json
 pump://JSON/read_bg_targets/settings/bg_targets_raw.json
@@ -21,26 +24,12 @@ calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
 calculate-iob://JSON/shell/monitor/iob.json
 reporting monitor/iob.json
-BG data is too old, or clock set incorrectly Thu Jul 28 2016 12:15:41 GMT-0700 (PDT) vs Thu Jul 28 2016 12:25:57 GMT-0700 (PDT)
+{"delta":1,"glucose":142,"avgdelta":0}
+{"duration":12,"rate":0.8,"temp":"absolute"}
+{"netbasalinsulin":1.9,"activity":0.0124,"basaliob":0.803,"hightempinsulin":1.9,"bolussnooze":1.984,"iob":2.798}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":0.8,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
+Setting neutral temp basal of 0.8U/hr
 determine-basal://text/shell/enact/suggested.json
 reporting enact/suggested.json
-[{"msg":"BG data is too old, or clock set incorrectly Thu Jul 28 2016 12:15:41 GMT-0700 (PDT) vs Thu Jul 28 2016 12:25:57 GMT-0700 (PDT)"}]
-No action required
-pump://JSON/read_battery_status/monitor/battery.json
-reporting monitor/battery.json
-pump://JSON/reservoir/monitor/reservoir.json
-reporting monitor/reservoir.json
-pump://JSON/read_status/monitor/status.json
-reporting monitor/status.json
-sleeping
-[Errno 2] No such file or directory
-openaps: 'status-upload' is not an openaps command. See 'openaps --help'.
-
-tz://JSON/rezone/monitor/pumphistory-zoned.json
-reporting monitor/pumphistory-zoned.json
-Nothing to upload.
-ns://JSON/shell/nightscout/uploaded.json
-reporting nightscout/uploaded.json
-all done.
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+{"temp":"absolute","bg":142,"tick":"+1","eventualBG":64,"snoozeBG":153,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 6 BGI: -1.86","reason":"Eventual BG 64<90, bolus snooze: eventual BG range 64-153; setting current basal of 0.8 as temp. Setting neutral temp basal of 0.8U/hr","duration":30,"rate":0.8}
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
