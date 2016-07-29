@@ -1,35 +1,7 @@
-Fri Jul 29 15:48:01 PDT 2016
-Traceback (most recent call last):
-  File "/usr/local/bin/openaps-use", line 4, in <module>
-    __import__('pkg_resources').run_script('openaps==0.1.5', 'openaps-use')
-  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
-    self.require(requires)[0].run_script(script_name, ns)
-  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
-    exec(code, namespace, namespace)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-use", line 63, in <module>
-    app( )
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/cli/__init__.py", line 51, in __call__
-    self.run(self.args)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/EGG-INFO/scripts/openaps-use", line 57, in run
-    output = app(args, self)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/__init__.py", line 92, in __call__
-    return self.method.selected(args)(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/__init__.py", line 31, in __call__
-    return self.method(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/uses/use.py", line 44, in __call__
-    self.before_main(args, app)
-  File "/usr/local/lib/python2.7/dist-packages/openaps-0.1.5-py2.7.egg/openaps/vendors/medtronic.py", line 61, in before_main
-    self.setup_medtronic( )
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/mmeowlink.py", line 92, in setup_medtronic
-    setup_medtronic_link(self)
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/mmeowlink.py", line 75, in setup_medtronic_link
-    link = builder.build(radio_type, port)
-  File "/home/pi/mmeowlink-source/mmeowlink/link_builder.py", line 16, in build
-    return SubgRfspyLink(port)
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/subg_rfspy_link.py", line 55, in __init__
-    self.open()
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/serial_interface.py", line 23, in open
-    raise AlreadyInUseException("%s already in use" % self.device)
-mmeowlink.vendors.serial_interface.AlreadyInUseException: /dev/mmeowlink already in use
+Fri Jul 29 15:54:01 PDT 2016
+pump://JSON/read_clock/monitor/clock.json
+mmtune:
+  "setFreq": 916.63,
+pump://JSON/read_clock/monitor/clock.json
 PREFLIGHT FAILED
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
