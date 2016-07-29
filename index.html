@@ -1,14 +1,8 @@
-Fri Jul 29 15:30:01 PDT 2016
-    setup_medtronic_link(self)
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/mmeowlink.py", line 75, in setup_medtronic_link
-    link = builder.build(radio_type, port)
-  File "/home/pi/mmeowlink-source/mmeowlink/link_builder.py", line 16, in build
-    return SubgRfspyLink(port)
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/subg_rfspy_link.py", line 55, in __init__
-    self.open()
-  File "/home/pi/mmeowlink-source/mmeowlink/vendors/serial_interface.py", line 23, in open
-    raise AlreadyInUseException("%s already in use" % self.device)
-mmeowlink.vendors.serial_interface.AlreadyInUseException: /dev/mmeowlink already in use
+Fri Jul 29 15:36:01 PDT 2016
+pump://JSON/read_clock/monitor/clock.json
 PREFLIGHT FAILED
 (pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+pump://JSON/read_clock/monitor/clock.json
+mmtune:
+  "setFreq": 916.63,
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
