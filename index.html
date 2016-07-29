@@ -1,8 +1,39 @@
-Thu Jul 28 20:06:01 PDT 2016
-pump://JSON/read_clock/monitor/clock.json
-PREFLIGHT FAILED
-(pi) CMD ((cd /home/pi/openaps-20160611/my_openaps && /usr/local/bin/openaps loop)2>&1 | logger -t openaps-loop )
+Thu Jul 28 20:12:01 PDT 2016
 pump://JSON/read_clock/monitor/clock.json
 mmtune:
-  "setFreq": 916.63,
+  "setFreq": 916.636,
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+PREFLIGHT WITH MMTUNE OK
+pump://JSON/read_settings/settings/settings.json
+reporting settings/settings.json
+pump://JSON/read_bg_targets/settings/bg_targets_raw.json
+reporting settings/bg_targets_raw.json
+pump://JSON/read_insulin_sensitivies/settings/insulin_sensitivities_raw.json
+reporting settings/insulin_sensitivities_raw.json
+pump://JSON/read_basal_profile_std/settings/basal_profile.json
+reporting settings/basal_profile.json
+get-profile://text/shell/settings/profile.json
+reporting settings/profile.json
+curl://text/shell/monitor/glucose.json
+reporting monitor/glucose.json
+dexcom_with_share://JSON/iter_glucose/monitor/dex_glucose.json
+reporting monitor/dex_glucose.json
+pump://JSON/read_clock/monitor/clock.json
+reporting monitor/clock.json
+pump://JSON/read_temp_basal/monitor/temp_basal.json
+reporting monitor/temp_basal.json
+pump://JSON/iter_pump_hours/monitor/pumphistory.json
+reporting monitor/pumphistory.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+calculate-iob://JSON/shell/monitor/iob.json
+reporting monitor/iob.json
+{"delta":14,"glucose":155,"avgdelta":11.667}
+{"duration":0,"rate":0,"temp":"absolute"}
+{"netbasalinsulin":-0.6,"activity":-0.0034,"basaliob":-0.084,"hightempinsulin":0,"bolussnooze":0,"iob":-0.084}
+{"max_iob":5,"type":"current","dia":3,"skip_neutral_temps":false,"current_basal":1.2,"max_daily_basal":1.6,"max_basal":5,"min_bg":90,"max_bg":120,"sens":30}
+determine-basal://text/shell/enact/suggested.json
+reporting enact/suggested.json
+{"temp":"absolute","bg":155,"tick":"+14","eventualBG":191,"snoozeBG":191,"mealAssist":"Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 105 Deviation: 33 BGI: 0.51","reason":"Eventual BG 191>=120, adj. req. rate:6.9 to maxSafeBasal:4.8, no temp, setting 4.8U/hr","duration":30,"rate":4.8}
 (pi) CMD (date > /home/pi/openaps-20160611/my_openaps/index.html && sudo tail -75 /var/log/syslog | grep openaps-loop  | cut -d" " -f6- >> /home/pi/openaps-20160611/my_openaps/index.html)
